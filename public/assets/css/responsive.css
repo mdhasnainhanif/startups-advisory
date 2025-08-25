@@ -1,0 +1,1429 @@
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1100px) {
+    .process-section {
+        min-height: 100vh;
+    }
+
+    .botie-div {
+        margin-top: 10rem;
+    }
+
+    .boTieCompian {
+        padding-top: 2rem;
+    }
+
+    .about-timeline>.section-outer {
+        padding-top: 1rem;
+    }
+
+    .fixed-line {
+        top: 34.5%;
+    }
+
+    .column-botie .gap-9 {
+        gap: 4rem;
+    }
+
+    .column-botie:after {
+        top: -56px !important;
+    }
+}
+
+@media(max-width: 1024px) {
+    .swiper-container {
+        display: block;
+    }
+
+    .cardSlider .swiper-slide {
+        height: unset;
+        display: flex;
+    }
+
+    .quote-space {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .banner-heading {
+        font-size: 50px;
+    }
+
+    .uc-accordion-title::before {
+        content: "\e903";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        font-family: Unicons;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        text-transform: none;
+        line-height: 1;
+        transform: translateY(-50%) rotate(0);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: transform 0.2s ease;
+        background-color: rgba(155, 155, 155, 0.25);
+        border-radius: 100%;
+    }
+
+    .ipad-pro {
+        display: none;
+    }
+
+    .uc-navbar-center:not(:only-child) {
+        position: absolute;
+        top: 50%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+        width: max-content;
+        box-sizing: border-box;
+        z-index: 990;
+    }
+
+    .space-for-ipad {
+        margin-top: 0px;
+    }
+
+    .for-gap {
+        gap: 1rem;
+    }
+
+    .banner-paragraph {
+        margin-top: 0px;
+    }
+
+    .for-ipad {
+        display: none;
+    }
+
+    .banner-button {
+        margin-bottom: 20px;
+    }
+
+    .logo-section-ipad {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: block;
+    }
+
+    .portfolio-section-ipad-pro {
+        padding-bottom: 4rem;
+    }
+
+    .team-expertise-slider {
+        padding: 30px;
+        gap: 1rem;
+    }
+
+    .testimonial-content {
+        gap: 3rem;
+        top: 12rem;
+    }
+
+    .testimonialSlider {
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+
+    .form-heading {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .modal-form-dekstop {
+        display: block;
+    }
+
+    /* Unique rules from second block */
+    .pricingCardOne {
+        max-width: 26rem;
+        height: unset;
+    }
+
+    .custom_modal {
+        max-width: 60rem;
+    }
+
+    .logo-section-mobile {
+        display: none;
+    }
+
+    .pricingCardContent h1 sub,
+    .pricingCardContentTwo h1 sub,
+    .pricingCardContentThree h1 sub {
+        bottom: 6.5rem;
+    }
+
+    .pricingCardContentThree::before {
+        left: 0.5rem;
+    }
+
+    .marketing-card-02 {
+        margin-top: 2rem;
+        min-width: 52rem;
+    }
+
+    .marketing-efforts {
+        max-width: 61rem;
+    }
+
+    .portofiol-fancy-box-04 {
+        margin-top: -4rem;
+    }
+
+    .portofiol-fancy-box-01 {
+        margin-top: -3.5rem;
+    }
+
+    .servicesCardsNew {
+        display: none !important;
+    }
+
+    .blogListBanner {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .about-banner {
+        margin-top: 0rem !important;
+    }
+
+    .services-sub-cards-new-slider {
+        box-shadow: 2px 2px 10px 0px #0000001A, -2px -2px 10px 0px #0000001A;
+        background: #0E0E0F26;
+    }
+
+    .services-cards {
+        flex-direction: column !important;
+    }
+
+    .servicesCardMainDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .services-cards-points {
+        width: 100% !important;
+    }
+
+    .services-form {
+        padding: 1.5rem;
+    }
+
+    .buttonPurpleResponsive {
+        display: none;
+    }
+
+    .ai-traditional-cards-01,
+    .ai-traditional-cards-02,
+    .ai-traditional-cards-03,
+    .ai-traditional-cards-04 {
+        padding: 1rem;
+    }
+
+    .ai-traditional-all-cardsSLider {
+        display: none;
+    }
+
+    .ai-traditional-all-cards {
+        display: flex;
+    }
+
+    .hideOnIpad {
+        display: none !important;
+    }
+
+    .services-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .banner {
+        align-items: end;
+        margin-top: 0;
+    }
+
+    .cta-section {
+        max-width: 61rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .brand-ipad-pro {
+        max-width: 60rem;
+        margin: auto;
+    }
+
+    /* Override for specific cases */
+    .uc-navbar-center:not(:only-child) {
+        left: 60%;
+    }
+
+    .logo-section {
+        display: none;
+    }
+}
+
+@media(max-width:992px) {
+    .custom_modal {
+        max-width: 29rem;
+    }
+
+    .banner-margin {
+        margin: 0rem;
+    }
+
+    .about-cards {
+        display: flex;
+        align-items: center;
+        background-color: #F3F5FF;
+        border-radius: 20px;
+        padding: 30px !important;
+        width: 50%;
+        margin-top: 2rem !important;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .about-cards-content {
+        margin-left: 0px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-cards-content h4 {
+        margin-bottom: 0;
+    }
+
+    .about-cards-main {
+        display: flex;
+        gap: 2rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .teamPortfolioSLider .swiper-pagination {
+        bottom: -2rem !important;
+    }
+
+    .teamPortfolioSLider {
+        overflow: visible !important;
+    }
+
+    .ai-traditional-cards-02,
+    .ai-traditional-cards-03,
+    .ai-traditional-cards-04 {
+        width: 100%;
+    }
+
+    .process-section {
+        height: 100vh;
+    }
+
+    .botie-div {
+        margin-top: 3rem;
+    }
+
+    .fixed-line {
+        top: 27.19rem !important;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    .about-timeline.section {
+        padding-top: 5.5rem !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .col-md-12 {
+        --grid-total: 12;
+        --grid-count: 12;
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+
+    .uc-navbar-dropdown-dropbar {
+        --uc-position-viewport-offset: 40px;
+    }
+
+    .about-timeline.section {
+        height: 100vh !important;
+        padding-top: 4rem;
+    }
+
+    .column-botie:after {
+        top: 160px !important;
+    }
+
+    .timeline-box.gap-8 {
+        gap: 10rem;
+    }
+
+    .compareCardResponsive {
+        display: none;
+    }
+
+    .traditional-card-section {
+        max-width: 46rem;
+    }
+
+    .logo-section-mobile {
+        display: none;
+    }
+
+    .banner-margin {
+        margin: 0rem;
+    }
+
+    .logoSectionHeading {
+        font-size: 35px !important;
+        text-align: center;
+    }
+
+    .logoSectionBorder {
+        place-self: center;
+    }
+
+    .logoBaner {
+        width: 100% !important;
+    }
+
+    .blogSlider {
+        display: block !important;
+    }
+
+    .blogCardMain {
+        display: none;
+    }
+
+    .marketing-efforts {
+        max-width: 46.5rem;
+    }
+
+    .marketing-cards-main {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .marketing-card-02 {
+        min-width: 0rem;
+    }
+
+    .pointsImage {
+        display: none;
+    }
+
+    .dataMainCard {
+        display: none !important;
+    }
+
+    .servicesCardsNew {
+        display: block !important;
+    }
+
+    .blogListBanner {
+        margin: 0rem;
+        border-radius: 0px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    input.blogInputHere {
+        min-width: 43rem;
+    }
+
+    .points-section {
+        width: 100% !important;
+    }
+
+    .ai-traditional-cards-02,
+    .ai-traditional-cards-03,
+    .ai-traditional-cards-04 {
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        height: 100%;
+        place-content: center;
+    }
+
+    .ai-traditional-cards-01,
+    .ai-traditional-cards-02,
+    .ai-traditional-cards-03,
+    .ai-traditional-cards-04 {
+        padding: 2rem;
+    }
+
+    .portofiol-fancy-box-01,
+    .portofiol-fancy-box-04 {
+        margin-top: -6rem;
+    }
+
+    .ai-traditional-all-cards-container {
+        display: flex;
+    }
+
+    .caseStudyCard {
+        flex-direction: column-reverse !important;
+    }
+
+    .caseStudyCard .case-content {
+        width: 100%;
+    }
+
+    .button-green {
+        white-space: normal;
+    }
+
+    .uc-navbar-right svg {
+        color: rgb(100 59 255);
+    }
+
+    .for-logo {
+        width: 20%;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .logo-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem;
+        display: none;
+    }
+
+    .logo-section-ipad {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: block;
+    }
+
+    .banner-heading {
+        font-size: 48px !important;
+    }
+
+    .banner {
+        margin-top: 3rem !important;
+    }
+
+    .swiper-container {
+        display: block;
+    }
+
+    .core-cards-heading {
+        font-size: 22px !important;
+    }
+
+    .core-cards-paragraph {
+        font-size: 1rem !important;
+    }
+
+    .core-cards-points {
+        font-size: 1rem !important;
+    }
+
+    .banner-space {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .quote-space {
+        padding-top: 1rem !important;
+    }
+
+    .ipad-gap {
+        gap: 2rem;
+    }
+
+    .pin-spacer {
+        padding-bottom: 0 !important;
+    }
+
+    .botie-div {
+        margin-left: 142.75rem !important;
+    }
+
+    #blurEffect {
+        background: rgb(255 255 255 / 40%) !important;
+        -webkit-backdrop-filter: blur(5px) !important;
+        backdrop-filter: blur(13px) !important;
+    }
+
+    .space-for-ipad {
+        margin-top: 0px;
+    }
+
+    .for-ipad {
+        display: none;
+    }
+
+    .cta-section {
+        max-width: 46rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .ipad-banner {
+        margin: auto;
+        text-align: center !important;
+    }
+
+    .ipad-banner-button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .statistic-section {
+        padding: 30px 0px;
+    }
+
+    .counter-section {
+        width: 23%;
+    }
+
+    img.new-logo {
+        width: 100%;
+        height: 100%;
+        max-width: 7rem;
+    }
+
+    .banner-image-for-ipad {
+        display: none;
+    }
+
+    .for-ipad-only {
+        width: 100% !important;
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .font-size-on-ipad {
+        font-size: 34px;
+    }
+
+    .teams {
+        width: 25% !important;
+    }
+
+    .blog-cards {
+        width: 47% !important;
+    }
+
+    .brand-tabs-li {
+        min-width: 22rem;
+        width: 100%;
+    }
+
+    .brand-tab-main {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .brand-tab-content {
+        width: 100%;
+    }
+
+    .brand-tab-image {
+        display: none;
+    }
+
+    .brand-tab-button {
+        width: fit-content;
+    }
+
+    .testimonial-content {
+        gap: 3rem;
+        top: 15rem;
+    }
+
+    .portfolio-tabs-li {
+        padding: 5px 35px;
+        width: 100%;
+        max-width: 15rem;
+    }
+
+    .team-expertise-slider {
+        gap: 1.5rem;
+    }
+
+    .services-form {
+        display: none;
+    }
+
+    .modal-ipad-responsive {
+        display: none;
+    }
+
+    .about-cards {
+        display: flex;
+        align-items: center;
+        background-color: #F3F5FF;
+        border-radius: 20px;
+        padding: 30px !important;
+        width: 50%;
+        margin-top: 2rem !important;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .about-cards-content {
+        margin-left: 0px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-cards-content h4 {
+        margin-bottom: 0;
+    }
+
+    .about-cards-main {
+        display: flex;
+        gap: 2rem !important;
+    }
+
+    .modal-form-ipad-responsive {
+        flex: 1 !important;
+    }
+
+    .ai-traditional-all-cardsSLider {
+        display: block;
+    }
+
+    .ai-traditional-all-cards {
+        display: none;
+    }
+
+    .fixed-line {
+        top: 20.19rem;
+    }
+
+    .icon-2 {
+        width: 24px;
+        height: 24px;
+        font-size: 17px;
+    }
+
+    .modal-form-dekstop {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .uc-offcanvas-bar {
+        left: -350px;
+        width: 350px;
+        padding: 30px 30px;
+    }
+
+    .uc-open>.uc-offcanvas-reveal {
+        width: 350px;
+    }
+
+    .uc-navbar-dropdown-dropbar {
+        --uc-position-viewport-offset: 30px;
+    }
+
+    .timeline-box.gap-8 {
+        gap: 2rem;
+    }
+
+    .dNoneOnMobile {
+        display: none;
+    }
+
+    .dNoneOnDesktop {
+        display: block;
+    }
+
+    .gapOnResponsive {
+        gap: 1rem;
+    }
+
+    .custom_modal {
+        max-width: 23rem;
+    }
+
+    .pointsMobile {
+        flex-direction: column-reverse;
+    }
+
+    .pointsBrand {
+        margin-bottom: 0rem;
+    }
+
+    .brand-ipad-pro {
+        gap: 1.5rem;
+    }
+
+    .services-tab-main {
+        gap: 1rem;
+    }
+
+    .services-tabs-li {
+        min-width: 18rem;
+    }
+
+    .digital-marketing-cards-01 {
+        margin-top: 0rem;
+    }
+
+    .logo-section-mobile {
+        display: block;
+    }
+
+    .input-fields {
+        flex-direction: column !important;
+    }
+
+    .logo-section-ipad {
+        display: none !important;
+    }
+
+    .ipad-banner-button {
+        justify-content: center;
+    }
+
+    .blogListBanner,
+    .homeBannerNew {
+        background-image: url(https://startupsadvisory.ai/assets/images/banner-mobile1.webp) !important;
+    }
+
+    .portofiol-fancy-box-01,
+    .portofiol-fancy-box-03 {
+        margin-top: 0rem;
+    }
+
+    .portofiol-fancy-box-04 {
+        margin-top: -8rem;
+    }
+
+    .portofiol-fancy-box-main>div {
+        max-width: 10rem;
+    }
+
+    .portofiol-fancy-box-main {
+        flex-wrap: wrap;
+    }
+
+    .pricingCardsMain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pricingCardContentThree::before {
+        content: "";
+        left: 8rem;
+        max-width: 7.5rem;
+    }
+
+    .marketing-efforts {
+        max-width: 25.5rem;
+    }
+
+    .ai-traditional-cards-01-content h3,
+    .ai-traditional-cards-02-content h3,
+    .ai-traditional-cards-03-content h3,
+    .ai-traditional-cards-04-content h3 {
+        margin-bottom: 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .ai-traditional-cards-01-sub-content h6,
+    .ai-traditional-cards-02-sub-content h6,
+    .ai-traditional-cards-03-sub-content h6,
+    .ai-traditional-cards-04-sub-content h6 {
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .ai-traditional-cards-03-content {
+        gap: 1rem;
+    }
+
+    .blogListInput {
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    input.blogInputHere {
+        width: 100%;
+        box-shadow: 0px 0px 10px 2px #0000001A;
+        border: 1px solid #CECECE;
+        padding: 1.2rem;
+        border-radius: 48px;
+        max-width: 24rem;
+        min-width: unset;
+    }
+
+    .blogListInput button {
+        border: none;
+        background: #643bff;
+        color: #fff;
+        border-radius: 48px;
+        padding: 0.4rem 0.5rem 0.4rem 1rem;
+        position: relative;
+        right: 0rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .blogList {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .ipad-spacing {
+        margin-top: 1rem !important;
+    }
+
+    .ai-traditional-cards-01,
+    .ai-traditional-cards-02,
+    .ai-traditional-cards-03,
+    .ai-traditional-cards-04 {
+        padding: 1rem !important;
+        width: unset;
+    }
+
+    .ai-traditional-cards-01 {
+        min-width: 11rem;
+    }
+
+    .pointsImage.col-md-6 {
+        display: none;
+    }
+
+    .brand-tab-image {
+        display: none;
+    }
+
+    .footerMobile {
+        display: none !important;
+    }
+
+    .mTopZeroMobile {
+        margin-top: 0rem !important;
+    }
+
+    .traditional-webiste-cards-main {
+        flex-direction: column !important;
+    }
+
+    .build-card-main {
+        flex-direction: column !important;
+    }
+
+    .traditional-webiste-cards-main .traditional-webiste-cards {
+        width: 100%;
+    }
+
+    .compare-card-main {
+        flex-direction: column;
+    }
+
+    .blogCardMain {
+        flex-direction: column;
+    }
+
+    .blogCardMain .blog-cards {
+        width: 93% !important;
+        margin: 0 auto;
+    }
+
+    .marketing-card-02 {
+        margin-top: 1rem;
+    }
+
+    .marketingCardMain .button-green {
+        margin-top: 1.5rem;
+    }
+
+    .font-size-on-ipad {
+        font-size: 38px !important;
+    }
+
+    .marketing-card-02::before,
+    .marketing-card-02::after {
+        content: none;
+    }
+
+    .marketing-card-02 {
+        min-width: 100% !important;
+    }
+
+    .marketing-cards {
+        min-width: 100% !important;
+    }
+
+    .marketing-cards-main {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .webDesignCard>div {
+        margin-top: 1rem !important;
+    }
+
+    .digital-marketing-main {
+        flex-direction: column;
+    }
+
+    .banner .services-form {
+        display: none;
+    }
+
+    .faqMain {
+        padding-left: 0rem !important;
+        padding-top: 0rem !important;
+    }
+
+    .counterCard.first {
+        margin-top: 0rem !important;
+    }
+
+    #statistic-1 .row.items-center {
+        flex-direction: column;
+    }
+
+    .counter-section {
+        width: 100% !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .statistic-number-heading {
+        white-space: nowrap;
+    }
+
+    .datDevCard-spacing {
+        width: 100% !important;
+        margin: 0 auto;
+        padding: 0rem !important;
+        height: 100%;
+    }
+
+    .about-banner {
+        padding-top: 4rem;
+    }
+
+    .footer-outer {
+        margin: 0rem !important;
+    }
+
+    .cards-spacing {
+        padding: 1rem !important;
+    }
+
+    .dataMainCard {
+        flex-direction: column;
+    }
+
+    .homeBanner {
+        padding-top: 6rem;
+    }
+
+    .nav-y .button-green {
+        margin-top: 1.5rem;
+    }
+
+    .timeline-box .image {
+        display: none;
+    }
+
+    .process-card {
+        margin-left: 0rem !important;
+    }
+
+    .clientsSwiper .swiper-wrapper,
+    .clientsSwiper1 .swiper-wrapper {
+        display: flex;
+        height: 100%;
+    }
+
+    .clientsSwiper .panel.clients {
+        flex-direction: row !important;
+    }
+
+    .vstack {
+        width: 100%;
+    }
+
+    .clientsSwiper1 .panel>.d-flex {
+        flex-direction: row !important;
+    }
+
+    .panel>.d-flex {
+        flex-direction: column;
+    }
+
+    .panel>.d-flex .services-cards-points:last-child {
+        margin-top: 0.82rem;
+    }
+
+    header.uc-header.header-six>.uc-navbar-sticky {
+        max-width: 95% !important;
+    }
+
+    header.uc-header.header-six>.uc-navbar-sticky .uc-navbar-main .uc-navbar {
+        padding: 0rem 0.725rem;
+    }
+
+    .button-green {
+        white-space: normal;
+    }
+
+    header .logo-image {
+        max-width: 6.5rem;
+    }
+
+    .button-green {
+        padding: 0.55rem 1.325rem !important;
+    }
+
+    .uc-header .uc-navbar-right>button {
+        display: none;
+    }
+
+    .botie-div>.row {
+        flex-wrap: wrap !important;
+    }
+
+    .pin-spacer {
+        padding-bottom: 0 !important;
+    }
+
+    .logo-gap {
+        flex-wrap: wrap;
+    }
+
+    .logo-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem;
+        display: none;
+    }
+
+    .botie-div {
+        margin-left: 0 !important;
+        min-width: 100%;
+    }
+
+    .column-botie {
+        min-width: 100%;
+    }
+
+    .column-botie:before {
+        display: none;
+    }
+
+    .column-botie:after {
+        display: none;
+    }
+
+    .gap-9 {
+        gap: 3rem !important;
+    }
+
+    .w-200px {
+        width: fit-content;
+        margin: 15px auto 0;
+    }
+
+    .logo-section-ipad {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: block;
+    }
+
+    .for-logo {
+        width: 33.33333333333333%;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .swiper-container {
+        display: block;
+    }
+
+    .mobile-menu-blur-effect {
+        background-color: rgb(255 255 255 / 40%) !important;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(8px) !important;
+    }
+
+    .banner-image-for-ipad {
+        display: none;
+    }
+
+    .space-for-ipad {
+        margin-top: 0px;
+    }
+
+    .banner-heading {
+        font-size: 38px !important;
+    }
+
+    .for-ipad {
+        display: none;
+    }
+
+    .cta-section {
+        max-width: 22rem;
+    }
+
+    .counter-section {
+        width: 48%;
+    }
+
+    .statistic-number-heading,
+    .none-statistic-number,
+    .statistic-number-paragraph {
+        margin-bottom: 0;
+    }
+
+    .services-form {
+        background-color: #fff;
+        border-radius: 16px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .col-sm-12 {
+        --grid-total: 12 !important;
+        --grid-count: 12 !important;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+    }
+
+    .BlogOnMobile {
+        gap: 1rem;
+    }
+
+    .blogContent01 h2 {
+        font-size: 29px;
+    }
+
+    .blogContent04 {
+        display: flex;
+        background: #643BFF;
+        color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: baseline;
+    }
+
+    .modal-form-ipad-responsive {
+        padding: 0.5rem;
+    }
+
+    .about-cards-main {
+        display: block !important;
+        gap: 3rem;
+    }
+
+    .about-cards {
+        display: flex;
+        align-items: center;
+        background-color: #F3F5FF;
+        border-radius: 20px;
+        padding: 30px !important;
+        width: 100% !important;
+        margin-top: 2rem !important;
+        flex-direction: row !important;
+        text-align: start !important;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .font-for-mobile {
+        font-size: 13px;
+    }
+
+    .mobile-space {
+        padding: 0 !important;
+    }
+
+    .mobile-cards-sapcing {
+        margin-top: 20px;
+    }
+
+    .teams {
+        width: 50% !important;
+    }
+
+    .datDevCard-spacing {
+        margin-top: 2rem;
+    }
+
+    .website-development-cards-01,
+    .website-development-cards-02 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .case-background-image {
+        padding: 1.5rem;
+    }
+
+    .brand-tab-content,
+    .brand-tab-image {
+        width: 100%;
+    }
+
+    .blog-cards {
+        width: 90% !important;
+    }
+
+    .brand-tab-main {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .brand-tabs-li {
+        background-image: url(/assets/images/brand-tabs-bg.webp);
+        color: white;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: none;
+        border-radius: 50px;
+        padding: 12px;
+        padding-right: 1.5rem;
+        font-size: 20px;
+        font-weight: 600;
+        min-width: 22rem;
+        width: 100%;
+    }
+
+    li.nav-item.portfolio-tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .portfolio-tab-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .portfolio-images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .portfolio-tabs-li {
+        padding: 5px 35px;
+        width: 100%;
+        max-width: 15rem;
+    }
+
+    .portfolio-image-01 img {
+        border-radius: 20px;
+        width: 100%;
+        max-width: 19rem;
+        box-shadow: 0px 0px 10px 2px #1061f81a;
+    }
+
+    .portfolio-image-card {
+        width: 21rem;
+    }
+
+    .portfolio-image-card img {
+        max-width: 21rem;
+    }
+
+    .team-expertise-slider {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 17px;
+    }
+
+    .team-member {
+        width: 100%;
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .member-name {
+        align-items: start;
+    }
+
+    .skills h5 {
+        font-size: 15px;
+    }
+
+    .about-member {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .teamPortfolioSLider .swiper-pagination {
+        bottom: -1.725rem !important;
+    }
+
+    .teamPortfolioSLider {
+        overflow: visible !important;
+    }
+
+    #main_features {
+        margin-bottom: 0rem;
+        overflow-x: hidden;
+    }
+
+    .section-outer {
+        overflow-x: hidden;
+    }
+
+    .modal-form-dekstop {
+        display: none;
+    }
+
+    .swiper-slide.swiper-slide-next {
+        margin-right: 0px;
+    }
+
+    .fixed-line {
+        display: none;
+    }
+}
