@@ -803,6 +803,7 @@ p.blog-content-paragraph {
 
 .testimonial-image img {
   transition: transform 0.6s;
+  min-width: 100%;
 }
 
 .testimonial-content {
@@ -820,6 +821,7 @@ p.blog-content-paragraph {
   margin: 0;
   font-size: 24px;
   font-weight: 600;
+  color: #fff;
 }
 
 .position {
