@@ -40,3 +40,59 @@ a {
     color-scheme: dark;
   }
 }
+
+.contactBanner {
+  margin-top: -20rem;
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.contactBanner .bg-secondary {
+  background: transparent !important;
+}
+
+.contactBanner .vstack.items-center.gap-2.lg\:gap-4.mb-4.sm\:mb-6.lg\:mb-8.max-w-750px.mx-auto.text-center {
+  display: none;
+}
+
+.contactUs {
+  background-image: url(/assets/images/cta-bg.webp);
+  background-size: cover;
+  color: #fff;
+  border-radius: 1.5rem;
+}
+
+.contactUsCards {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactUsCards h6 {
+  margin: 0rem;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.contactUsCards p {
+  margin: 0rem;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.bannerBackground {
+  background-image: url(../../public/assets/images/Image_1.jpg);
+  background-Position: "50% 85%"
+
+}
+
+.pricingTwo section.pricingSection {
+  background-color: #4b2fb2 !important;
+}
+
+.video-popup {
+  background: none;
+  border: none;
+}
