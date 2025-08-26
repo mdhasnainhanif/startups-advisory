@@ -2692,6 +2692,11 @@ input.blogInputHere {
   padding: 1.2rem;
   border-radius: 48px;
   min-width: 50rem;
+  background-color: #fff;
+}
+
+input.blogInputHere::placeholder {
+  color: #000;
 }
 
 .blogListInput {
@@ -2750,6 +2755,7 @@ p.blogListInputParagraph {
   font-size: 14px;
   font-weight: 400;
   color: #643bff;
+  margin-bottom: 0rem;
 }
 
 .blogAddImage {
@@ -3801,4 +3807,8 @@ span.core-cards-points {
 
 .mb-0{
   margin-bottom: 0 !important;
+}
+
+.videoTestimonialStaff .swiper{
+  padding-bottom: 4rem !important;
 }

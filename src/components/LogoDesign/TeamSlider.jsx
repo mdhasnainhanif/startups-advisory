@@ -11,7 +11,7 @@ export default function TeamSlider() {
   return (
     <div
       id="main_features"
-      className="key-features section overflow-hidden team-pordolio-section section-padding pt-0"
+      className="key-features section overflow-hidden team-pordolio-section section-padding"
     >
       <div className="section-outer">
         <div className="container sm:max-w-lg xl:max-w-xl">
