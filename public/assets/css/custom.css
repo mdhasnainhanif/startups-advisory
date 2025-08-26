@@ -2117,6 +2117,8 @@ button.traditional-webiste-cards-button {
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
+  max-width: 25rem;
 }
 
 .build-card {
@@ -2184,9 +2186,9 @@ button.traditional-webiste-cards-button {
   bottom: 0.425rem !important;
 }
 
-.printingSlider .swiper-wrapper {
+/* .printingSlider .swiper-wrapper {
   padding-bottom: 4rem;
-}
+} */
 
 .clientsSwiper .swiper-slide,
 .clientsSwiper1 .swiper-slide {
@@ -2264,9 +2266,9 @@ header.uc-header.header-six
   bottom: 0.425rem !important;
 }
 
-.printingSlider .swiper-wrapper {
+/* .printingSlider .swiper-wrapper {
   padding-bottom: 4rem;
-}
+} */
 
 .clientsSwiper .swiper-slide,
 .clientsSwiper1 .swiper-slide {

@@ -60,9 +60,9 @@
   min-width: 100%;
 }
 
-.botie-div > .row {
+.botie-div>.row {
   flex-wrap: nowrap;
-} 
+}
 
 /* .about-timeline > .section-outer {
   padding-top: 5rem;
@@ -289,11 +289,7 @@ button.traditional-webiste-cards-button {
   font-weight: 400;
 }
 
-header.uc-header.header-six
-  .uc-navbar-main
-  .uc-navbar-nav
-  li
-  > a.nav-menu.menu-hover:hover {
+header.uc-header.header-six .uc-navbar-main .uc-navbar-nav li>a.nav-menu.menu-hover:hover {
   color: #643bff;
   opacity: 0.7;
 }
@@ -498,7 +494,7 @@ blockquote {
   z-index: -1;
 }
 
-header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
+header.uc-header.header-six>.uc-navbar-sticky .uc-navbar-main .uc-navbar {
   min-height: 70px;
 }
 
@@ -1041,88 +1037,103 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
   }
 }
 
-.dropDownNumberCard{
-        background:url(/assets/images/popup_bg.jpg);
-        background-size:cover;
-        background-repeat:no-repeat;
-        border-radius:12px;
-        padding:0.4rem;
-    }
-    .dropDownNumberCard h3{
-        font-size:20px;
-        font-weight:700;
-        margin:0;
-        color:#fff;
-        line-height: 0.9;
-    }
-    .dropDownNumberCard p{
-        font-size:12px;
-        font-weight:400;
-        margin:0;
-        color:#fff;
-    }
-    .dropDownNumberCard{
-    background: url(/assets/images/popup_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 12px;
-    padding: 0.76rem;
-    display: flex;
-    flex-direction: column;
-    }
-    .dropDownNumberCardMain {
-    display: flex;
-    gap: 0.3rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom:0.66rem;
-    margin-top:0.66rem;
+.dropDownNumberCard {
+  background: url(/assets/images/popup_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 0.4rem;
 }
-.dropDownRatting{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:0.3rem;
+
+.dropDownNumberCard h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  line-height: 0.9;
 }
+
+.dropDownNumberCard p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  color: #fff;
+}
+
+.dropDownNumberCard {
+  background: url(/assets/images/popup_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 0.76rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropDownNumberCardMain {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.66rem;
+  margin-top: 0.66rem;
+}
+
+.dropDownRatting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
 .servicesDropdownPages a.active {
-   display: flex;
-  background:url(/assets/images/popup.webp) !important;
+  display: flex;
+  background: url(/assets/images/popup.webp) !important;
   color: #fff !important;
-  background-size:cover !important;
-  background-repeat:no-repeat !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
+
 .dropDownRatting span {
-    height: 0.4rem;
-    width: 0.4rem;
-    background: #0fdac2;
-    border-radius: 50%;
+  height: 0.4rem;
+  width: 0.4rem;
+  background: #0fdac2;
+  border-radius: 50%;
 }
-.servicesDropdownPages a{
-    padding:1rem;
-    display:flex;
-    align-items:center;
+
+.servicesDropdownPages a {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
-.servicesDropdown a:hover{
-    opacity:1 !important;
-    color:#000 !important;
+
+.servicesDropdown a:hover {
+  opacity: 1 !important;
+  color: #000 !important;
 }
+
 .activeIcon01 a.active img {
   content: url("/assets/images/dropdown-icon-01-active.svg");
-  
+
 }
+
 .activeIcon02 a.active img {
   content: url("/assets/images/dropdown-icon-02-active.svg");
 }
+
 .activeIcon03 a.active img {
   content: url("assets/images/dropdown-icon-01-active.svg");
 }
+
 .activeIcon04 a.active img {
   content: url("/assets/images/dropdown-icon-02-active.svg");
 }
+
 .activeIcon05 a.active img {
   content: url("/assets/images/dropdown-icon-01-active.svg");
 }
+
 .servicesDropdownPages a.active span,
 .servicesDropdownPages a.active p,
 .servicesDropdownPages a.active h4,
@@ -1130,115 +1141,129 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
   color: #fff !important;
 }
 
-    .uc-navbar-nav > li > a {
-      font-weight: 400;
-      position: relative;
-      padding-bottom: 8px; 
-    }
-    .uc-navbar-nav > li > a.active {
-      color: #643bff !important;
-      font-weight: 400;
-    }
-    .uc-navbar-nav > li > a.active::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 25px;
-      width: calc(100% + 12px);  
-      max-width: 140%;           
-      height: 1.52px;
-      background: #0fdac2;
-      pointer-events: none;
-      transition: width 0.3s ease;
-    }
-    .servicesDropdownContent01{
-        padding:1rem;
-    }
-    .servicesDropdownContent02{
-        padding:1rem;
-        padding-top:1.5rem;
-        background:url(/assets/images/dropDownBG.png);
-        background-size:cover;
-        border-bottom-right-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-    
-   .servicesDropDownSubContent h2 span {
-         border-radius: 12px;
-        background: #643bff;
-        color: #fff;
-        padding: 0rem 0.5rem;
-        display:inline-block;
-        transform: rotate(-2deg);
-   }
-    .servicesDropDownSubContent h2{
-        margin: 0;
-        font-size: 32px;
-        font-weight: 700;
-    }
-    .servicesDropdownContent02Main{
-        text-align:center;
-    }
-    .servicesDropDownSubContent img{
-        max-width:7rem;
-    }
-    .servicesDropDownSubContent h6 {
-        font-size:14px;
-        font-weight:600;
-        margin:0;
-    }
-    .dropDownCard {
-        background: #fff;
-        padding: 1rem;
-        border-radius: 18px;
-        box-shadow: 0px 0px 15px 2px #0000000D;
-        border: 1px solid #643BFF33;
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-    }
-    
-    .dropDownCard p {
-        color: #5C5C5C;
-        font-size: 15px;
-    }
-    
-    .aboutStaff {
-        display: flex;
-        gap: 0.4rem;
-        margin-top:0.5rem;
-    }
-    
-    .staffDesignation h5 {
-        margin: 0;
-        color: #5C5C5C;
-        font-size: 14px;
-        font-weight:500;
-    }
-    
-    .staffDesignation h4 {
-        margin: 0;
-        font-size: 16px;
-        color: #643BFF;
-        font-weight:700;
-    }
-    .aboutStaff img{
-        border-radius:10px;
-    }
-    .dropDownSlider{
-        padding-bottom:1.6rem;
-        margin-top:0.6rem;
-    }
-    .dropDownLogo p{
-        font-size:15px;
-        font-weight:500;
-        margin:0;
-    }
-    .dropDownLogo{
-        display:flex;
-        flex-direction:column;
-        gap:0.5rem;
-        align-items:center;
-        justify-content:center;
-    }
+.uc-navbar-nav>li>a {
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.uc-navbar-nav>li>a.active {
+  color: #643bff !important;
+  font-weight: 400;
+}
+
+.uc-navbar-nav>li>a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  width: calc(100% + 12px);
+  max-width: 140%;
+  height: 1.52px;
+  background: #0fdac2;
+  pointer-events: none;
+  transition: width 0.3s ease;
+}
+
+.servicesDropdownContent01 {
+  padding: 1rem;
+}
+
+.servicesDropdownContent02 {
+  padding: 1rem;
+  padding-top: 1.5rem;
+  background: url(/assets/images/dropDownBG.png);
+  background-size: cover;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.servicesDropDownSubContent h2 span {
+  border-radius: 12px;
+  background: #643bff;
+  color: #fff;
+  padding: 0rem 0.5rem;
+  display: inline-block;
+  transform: rotate(-2deg);
+}
+
+.servicesDropDownSubContent h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.servicesDropdownContent02Main {
+  text-align: center;
+}
+
+.servicesDropDownSubContent img {
+  max-width: 7rem;
+}
+
+.servicesDropDownSubContent h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dropDownCard {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 18px;
+  box-shadow: 0px 0px 15px 2px #0000000D;
+  border: 1px solid #643BFF33;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dropDownCard p {
+  color: #5C5C5C;
+  font-size: 15px;
+  margin: 0;
+}
+
+.aboutStaff {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.staffDesignation h5 {
+  margin: 0;
+  color: #5C5C5C;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.staffDesignation h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #643BFF;
+  font-weight: 700;
+}
+
+.aboutStaff img {
+  border-radius: 10px;
+}
+
+.dropDownSlider {
+  padding-bottom: 1.6rem;
+  margin-top: 0.6rem;
+}
+
+.dropDownLogo p {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dropDownLogo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
