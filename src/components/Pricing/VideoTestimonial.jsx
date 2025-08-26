@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import ModalVideo from "react-modal-video";
 
 // CSS imports
@@ -68,13 +68,13 @@ const VideoTestimonial = () => {
                         {/* Swiper Slider */}
                         <div className="row justify-center">
                             <Swiper
-                                modules={[Pagination]}
+                                modules={[Pagination, Autoplay]}
                                 pagination={{ clickable: true }}
                                 spaceBetween={20}
                                 slidesPerView={1}
                                 loop={true}
                                 autoplay={{ delay: 3000 }}
-                                
+
                                 breakpoints={{
                                     768: { slidesPerView: 2 },
                                     1024: { slidesPerView: 3 },

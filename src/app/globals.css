@@ -96,3 +96,7 @@ a {
   background: none;
   border: none;
 }
+.integration-icons{
+  width: 100%;
+  max-width: 50rem;
+}

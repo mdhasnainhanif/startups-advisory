@@ -115,7 +115,7 @@ const TestimonialSlider = () => {
 
   return (
     <div id="clients_feedback" className="clients-feedback section panel">
-      <div className="section-outer panel bg-secondary text-black rounded-2 lg:rounded-3 section-padding">
+      <div className="section-outer panel bg-secondary text-black section-padding">
         <div className="container xl:max-w-xl">
           <div className="section-inner panel vstack items-center gap-4 md:gap-6 lg:gap-8 max-w-100">
             {/* Heading */}
