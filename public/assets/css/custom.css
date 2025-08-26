@@ -3798,3 +3798,7 @@ span.core-cards-points {
 .team-expertise-slider h2, .team-expertise-slider h5, .team-expertise-slider h3 {
   color: #fff;
 }
+
+.mb-0{
+  margin-bottom: 0 !important;
+}

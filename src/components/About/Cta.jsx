@@ -2,11 +2,11 @@
 
 import React from "react";
 
-const Cta = () => {
+const Cta = (props) => {
   return (
     <div
       id="main_features"
-      className="key-features section overflow-hidden cta-section section-padding sectionMarginBottom"
+      className={`key-features section overflow-hidden cta-section section-padding sectionMarginBottom ${props.props === "marginBottomZero" ? "mb-0" : ""}`}
     >
       <div className="section-outer">
         <div className="container sm:max-w-lg xl:max-w-xl">
