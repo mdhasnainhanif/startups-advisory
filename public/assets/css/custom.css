@@ -2948,12 +2948,13 @@ p.blogListInputParagraph {
 
 .uc-navbar-nav > li > a {
   padding: 0 15px;
-  color: #999;
+  color: #000;
+  font-weight: 500;
 }
 
 .uc-navbar-nav > li:hover > a,
 .uc-navbar-nav > li > a[aria-expanded="true"] {
-  color: #666;
+  color: #000;
 }
 
 .uc-navbar-nav > li > a:active {
@@ -3813,4 +3814,9 @@ span.core-cards-points {
 
 .videoTestimonialStaff .swiper{
   padding-bottom: 4rem !important;
+}
+
+header.is-sticky .uc-navbar-main{
+  background-color: #fff;
+  border-radius: 3rem;
 }

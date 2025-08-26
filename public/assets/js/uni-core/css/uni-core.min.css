@@ -3147,7 +3147,7 @@ ul.uc-nav-sub {
 }
 .uc-navbar-nav > li > a {
   padding: 0 15px;
-  color: #999;
+  color: #000;
 }
 .uc-navbar-nav > li:hover > a,
 .uc-navbar-nav > li > a[aria-expanded="true"] {
