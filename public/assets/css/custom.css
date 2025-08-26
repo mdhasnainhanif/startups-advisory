@@ -430,7 +430,6 @@ a.button-green:hover,
 }
 
 .for-logo {
-  width: 14.28571428571429%;
   padding: 0;
   text-align: center;
 }
@@ -3783,4 +3782,9 @@ span.core-cards-points {
 
 .text-light{
     color: #fff;
+}
+
+.logoDesignLogos .row {
+  display: flex;
+  gap: 4rem;
 }

@@ -8,6 +8,10 @@ export default function LogosLogoDesign() {
     "logo26.webp",
     "logo25.webp",
     "logo24.webp",
+    "logo23.webp",
+    "logo22.webp",
+    "logo06.webp",
+    "logo05.webp",
     "logo04.webp",
     "logo03.webp",
     "logo02.webp",
@@ -15,7 +19,7 @@ export default function LogosLogoDesign() {
   ];
 
   return (
-    <section className="section-padding">
+    <section className="section-padding logoDesignLogos">
       <div className="container">
         <div className="row justify-center items-center">
           {logos.map((logo, index) => (

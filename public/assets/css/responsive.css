@@ -490,7 +490,6 @@
     }
 
     .for-logo {
-        width: 20%;
         text-align: center;
         padding: 0;
     }
@@ -723,6 +722,9 @@
 }
 
 @media (max-width: 576px) {
+    .logoDesignLogos .row {
+        gap: 2rem;
+      }
     .uc-offcanvas-bar {
         left: -350px;
         width: 350px;
@@ -1155,7 +1157,6 @@
     }
 
     .for-logo {
-        width: 33.33333333333333%;
         text-align: center;
         padding: 0;
     }

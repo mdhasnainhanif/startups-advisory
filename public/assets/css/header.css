@@ -38,9 +38,9 @@
 }
 
 .for-logo {
-  width: 14.28571428571429%;
   padding: 0;
   text-align: center;
+  width: fit-content;
 }
 
 .swiper-container {
@@ -656,7 +656,6 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
   }
 
   .for-logo {
-    width: 20%;
     text-align: center;
     padding: 0;
   }
@@ -735,7 +734,6 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
   }
 
   .for-logo {
-    width: 20%;
     text-align: center;
     padding: 0;
   }
@@ -841,7 +839,6 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
   }
 
   .for-logo {
-    width: 33.33333333333333%;
     text-align: center;
     padding: 0;
   }
@@ -865,7 +862,6 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
   }
 
   .for-logo {
-    width: 33.33333333333333%;
     text-align: center;
     padding: 0;
   }
@@ -1020,7 +1016,6 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
   }
 
   .for-logo {
-    width: 33.33333333333333%;
     text-align: center;
     padding: 0;
   }
