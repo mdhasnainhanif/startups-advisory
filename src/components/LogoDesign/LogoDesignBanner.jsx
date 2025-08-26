@@ -1,0 +1,89 @@
+"use client";
+
+import React from "react";
+import Form from "../Form/Form";
+
+const LogoDesignBanner = () => {
+  return (
+    <div
+      id="overview"
+      className="overview section overflow-hidden uc-dark lg:m-2 mb-0 lg:rounded-3"
+    >
+      {/* Background Image */}
+      <div
+        className="position-cover opacity-70 bg-cover logoDesignBanner"
+        data-src="/assets/images/Image_1.jpg"
+        data-uc-img
+      ></div>
+
+      <div
+        className="section-outer pt-9 xl:pt-10 space-for-ipad"
+        style={{ position: "relative" }}
+      >
+        <div className="container xl:max-w-xl mt-6 mb-6">
+          <div className="section-inner">
+            <div className="row child-cols-6 g-6 xl:g-8 banner">
+              {/* Banner Content */}
+              <div className="col-md-12 col-sm-12 logoBaner">
+                <div
+                  className="vstack items-start text-start gap-3 max-w-600px lg:max-w-750px px-2 lg:px-0 for-gap ipad-banner"
+                  data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+                >
+                  {/* Top Tag */}
+                  <div
+                    className="cstack gap-1 py-1 px-2 border rounded-pill for-ipad"
+                    style={{ border: "1px solid #83838340" }}
+                  >
+                    <span
+                      className="d-inline-block w-4px h-4px rounded-circle bg-primary-400"
+                      style={{ backgroundColor: "#0FDAC2" }}
+                    ></span>
+                    <span className="fs-8 fw-bold text-uppercase">
+                      Logo Design Services
+                    </span>
+                  </div>
+
+                  {/* Main Heading */}
+                  <p
+                    className="h3 lg:h2 xl:h1 m-0 text-black font-size-on-ipad"
+                    style={{ fontSize: "55px" }}
+                  >
+                    Logo Design Services
+                    <span className="d-inline-flex px-1 bg-primary text-white -rotate-1 lg:-rotate-2 rounded-1 lg:rounded-1-5">
+                      Logo Design
+                    </span>{" "}
+                    Services
+                  </p>
+
+                  {/* Paragraph */}
+                  <p className="fs-5 xl:fs-4 text-black dark:text-black md:d-block banner-paragraph">
+                    Get smart, stunning logos created with AI-driven speed and
+                    designer finesse.
+                  </p>
+
+                  {/* CTA Button */}
+                  <div
+                    className="vstack sm:hstack gap-1 lg:gap-2 mt-1 sm:mt-2 ipad-banner-button d-flex"
+                    style={{ flexDirection: "row" }}
+                  >
+                    <a
+                      className="button-green open-modal-btn"
+                      data-modal-target="#welcomeModal"
+                      href="#"
+                    >
+                      Claim Your Free Strategy Session
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <Form />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LogoDesignBanner;

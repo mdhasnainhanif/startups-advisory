@@ -31,6 +31,30 @@ const testimonials = [
     role: "Marketing Lead",
     avatar: "/assets/images/clients.webp",
   },
+  {
+    text: "We’re looking for people who share our vision! Most of our time used to be taken up by alternate administrative work whereas now we can focus on helping our employees.",
+    name: "Mark Zellers",
+    role: "CEO, Co-Founder.",
+    avatar: "/assets/images/clients.webp",
+  },
+  {
+    text: "This powerful tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.",
+    name: "Sarah Johnson",
+    role: "Product Manager",
+    avatar: "/assets/images/clients.webp",
+  },
+  {
+    text: "We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers that comply with this regulation — and this builder is just outstanding!",
+    name: "John Miller",
+    role: "CTO",
+    avatar: "/assets/images/clients.webp",
+  },
+  {
+    text: "Our launch campaign was effortless. The team could finally focus on scaling instead of repetitive admin tasks.",
+    name: "Emily Carter",
+    role: "Marketing Lead",
+    avatar: "/assets/images/clients.webp",
+  },
 ];
 
 const TestimonialSlider = () => {
@@ -49,10 +73,10 @@ const TestimonialSlider = () => {
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
       speed: 2000,
-    //   autoplay: { 
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    //   },
+      autoplay: { 
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       breakpoints: {
         1024: {
           slidesPerView: 2,
@@ -70,11 +94,11 @@ const TestimonialSlider = () => {
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
       speed: 2000,
-    //   autoplay: {
-    //     delay: 3000,
-    //     reverseDirection: true,
-    //     disableOnInteraction: false,
-    //   },
+      autoplay: {
+        delay: 3000,
+        reverseDirection: true,
+        disableOnInteraction: false,
+      },
       breakpoints: {
         1024: {
           slidesPerView: 2,

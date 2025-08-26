@@ -1,3 +1,6 @@
+"use client";
+import Image from "next/image";
+
 export default function WhyChooseCard() {
   return (
     <div id="features" className="features section panel section-padding">
@@ -79,15 +82,16 @@ export default function WhyChooseCard() {
                     style={{ backgroundPosition: "50% 85%" }}
                   ></div>
 
-                  <div className="panel p-3 pb-0">
-                    <img
-                       
-                      decoding="async"
-                      className="rounded-bottom-1-5 lg:rounded-bottom-3"
-                      src="assets/images/home-06-dashboard-components.webp"
-                      alt="dashboard-components"
-                    />
-                  </div>
+                                     <div className="panel p-3 pb-0">
+                     <Image
+                       priority
+                       className="rounded-bottom-1-5 lg:rounded-bottom-3"
+                       src="/assets/images/home-06-dashboard-components.webp"
+                       alt="dashboard-components"
+                       width={400}
+                       height={300}
+                     />
+                   </div>
 
                   <div
                     className="panel vstack items-start justify-between gap-2 p-3 lg:p-4 xl:p-6 pt-0"
@@ -134,23 +138,26 @@ export default function WhyChooseCard() {
                     Within 90 days, we saw a 60% increase in qualified leads.
                     This is marketing that actually performs.
                   </p>
-                  <img
-                    className="starIcons"
-                     
-                    decoding="async"
-                    src="assets/images/star.svg"
-                    alt="star"
-                  />
+                                     <Image
+                     priority
+                     className="starIcons"
+                     src="/assets/images/star.svg"
+                     alt="star"
+                     width={24}
+                     height={24}
+                   />
 
-                  <div className="teamMember">
-                    <div>
-                      <img
-                         
-                        decoding="async"
-                        src="assets/images/team-02.jpg"
-                        alt="team"
-                      />
-                    </div>
+                                     <div className="teamMember">
+                     <div>
+                       <Image
+                         priority
+                         src="/assets/images/team-02.jpg"
+                         alt="team"
+                         width={60}
+                         height={60}
+                         className="rounded-circle"
+                       />
+                     </div>
                     <div>
                       <h4 className="text-white font-bold">Stephen Higgins</h4>
                       <p>CEO</p>
@@ -158,14 +165,16 @@ export default function WhyChooseCard() {
                   </div>
                 </div>
 
-                <div className="case-image p-0">
-                  <img
-                     
-                    decoding="async"
-                    src="assets/images/img.jpg"
-                    alt="team"
-                  />
-                </div>
+                                 <div className="case-image p-0">
+                   <Image
+                     priority
+                     src="/assets/images/img.jpg"
+                     alt="team"
+                     width={120}
+                     height={120}
+                     className="rounded"
+                   />
+                 </div>
               </div>
             </div>
           </div>

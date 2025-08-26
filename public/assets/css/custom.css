@@ -249,6 +249,7 @@ a.button-green:hover,
 .cout-heading {
   font-size: 24px;
   font-weight: 700;
+  margin: 0;
 }
 
 .cout-paragraph {
@@ -660,10 +661,17 @@ a.button-green:hover,
   margin-bottom: 0;
 }
 
+.statistic-number-paragraph {
+  color: #fff;
+  font-weight: 600;
+}
+
 .statistic-number,
 .none-statistic-number {
   font-family: "Mabry Pro", "IBM Plex Sans Arabic", serif !important;
   font-size: 48px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .blog-cards {
@@ -1229,7 +1237,7 @@ a.portfolio-card-button {
 }
 
 .ai-traditional-cards-01-sub-content h6 {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 20px;
   font-weight: 700;
 }
@@ -1266,7 +1274,7 @@ a.portfolio-card-button {
 }
 
 .ai-traditional-cards-02-sub-content h6 {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 20px;
   font-weight: 700;
 }
@@ -1350,7 +1358,7 @@ a.portfolio-card-button {
 .ai-traditional-cards-04-sub-content h6 {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 span.ai-traditional-cards-01-border {
@@ -1497,7 +1505,6 @@ span.ai-traditional-cards-04-border {
   font-size: 4rem;
   z-index: 1;
   pointer-events: none;
-  border: 3px solid #fff;
   border-radius: 16px;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   transition: clip-path 0.5s ease, opacity 0.3s ease;
@@ -3752,4 +3759,29 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
 }
 .about-timeline > .section-outer {
   padding-top: 0rem;
+}
+
+.logoDesignBanner{
+    background-position: 50% 85%;
+    background-image: url("/assets/images/Image_1.jpg");
+}
+
+span.core-cards-points {
+    font-size: 1rem;
+}
+
+.pricingPakage h5{
+    color: #fff;
+}
+
+.pricingCardContent p, .pricingCardContentTwo p, .pricingCardContentThree p{
+    margin: 0;
+}
+
+.pricingCardContentTwo p{
+    margin: 0;
+}
+
+.text-light{
+    color: #fff;
 }

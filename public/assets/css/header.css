@@ -165,7 +165,7 @@ button.traditional-webiste-cards-button {
 .card-03,
 .card-05 {
   border: 2px solid #b8fff7;
-  background: url(./assets/images/cards-bg.webp);
+  background: url(/assets/images/cards-bg.webp);
   border-radius: 36px;
   display: flex;
   padding: 2rem;
@@ -224,7 +224,7 @@ button.traditional-webiste-cards-button {
 }
 
 .statistic-section {
-  background-image: url(./assets/images/case-background.svg);
+  background-image: url(/assets/images/case-background.svg);
 }
 
 .column-botie:before {
@@ -903,7 +903,7 @@ header.uc-header.header-six > .uc-navbar-sticky .uc-navbar-main .uc-navbar {
 
   .brand-tab-content,
   .brand-tab-image {
-    width: 100%;
+    width: 100% !important;
   }
 
   .brand-tab-main {
