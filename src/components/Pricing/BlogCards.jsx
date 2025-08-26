@@ -53,9 +53,10 @@ const BlogCard = ({ img, category, date, title, desc, link }) => (
     </div>
 );
 
-const Blog = () => {
+const BlogCards = (props) => {
+    console.log(props);
     return (
-        <div className="container section-padding">
+        <div className={`container section-padding ${props.props === "paddingTopZero" ? "pt-0" : ""}`}>
             {/* Header */}
             <div className="row">
                 <div className="vstack items-center gap-2 lg:gap-4 max-w-750px mx-auto text-center">
@@ -90,4 +91,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default BlogCards;
