@@ -258,9 +258,7 @@ const Header = () => {
                                 <SwiperSlide>
                                   <div className="dropDownCard">
                                     <p>
-                                      "The website they crafted for us is both
-                                      stylish in design and flawless in
-                                      performance."
+                                      "Amazing work, highly professional team!"
                                     </p>
                                     <div className="aboutStaff">
                                       <img

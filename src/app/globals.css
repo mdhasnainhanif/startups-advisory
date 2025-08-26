@@ -101,3 +101,13 @@ a {
   width: 100%;
   max-width: 50rem;
 }
+.servicesFormPopup h5{
+  font-weight: 700;
+}
+.servicesFormPopup h1{
+  font-weight: 700;
+}
+.popup-image{
+  width: 100%;
+  max-width: 20rem;
+}
