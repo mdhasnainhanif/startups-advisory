@@ -68,13 +68,13 @@ const GsapSliderHome = () => {
                     </span>
                   </div>
                   <p className="h3 lg:h2 xl:h1 m-0 px-2 text-white">
-                    BowTie{" "}
+                    BowTie
                     <span
                       className="d-inline-flex px-1 bg-primary text-white -rotate-1 lg:-rotate-2 rounded-1 lg:rounded-1-5"
                       style={{ backgroundColor: "#0fdac2", color: "#fff" }}
                     >
                       Campaign
-                    </span>{" "}
+                    </span>
                     Lifecycle
                   </p>
                 </div>
