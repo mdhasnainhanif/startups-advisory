@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 const faqs = [
@@ -32,6 +33,8 @@ const QuotationForm = () => {
   const [openIndex, setOpenIndex] = useState(0); // ✅ first open
   const contentRefs = useRef([]); // refs for measuring heights
   const [heights, setHeights] = useState([]); // cached scrollHeights
+  const pathname = usePathname();
+  const isContactPage = pathname === "/contact-us";
 
   const toggleFAQ = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -57,7 +60,7 @@ const QuotationForm = () => {
   return (
     <div
       id="hero_header"
-      className="hero-header section panel overflow-hidden section-padding"
+      className={`hero-header section panel overflow-hidden section-padding ${isContactPage ? "contactBanner" : ""}`}
     >
       {/* Background */}
       <div className="position-absolute top-0 start-0 end-0 min-h-600px bg-secondary dark:bg-opacity-0 z-0"></div>

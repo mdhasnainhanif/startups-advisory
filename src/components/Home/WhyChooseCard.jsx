@@ -167,7 +167,7 @@ export default function WhyChooseCard() {
 
                 <div className="case-image p-0">
                   <img
-                    priority
+                    
                     src="/assets/images/img.jpg"
                     alt="team"
                     className="rounded"

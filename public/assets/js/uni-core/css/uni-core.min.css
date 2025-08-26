@@ -140,7 +140,7 @@ h6 {
   color: #333;
   text-transform: none;
 }
-* + .uc-h1,
+/* * + .uc-h1,
 * + .uc-h2,
 * + .uc-h3,
 * + .uc-h4,
@@ -159,7 +159,7 @@ h6 {
 * + h5,
 * + h6 {
   margin-top: 40px;
-}
+} */
 .uc-h1,
 h1 {
   font-size: 2.23125rem;

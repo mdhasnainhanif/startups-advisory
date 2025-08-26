@@ -431,7 +431,6 @@ a.button-green:hover,
 
 .for-logo {
   width: 14.28571428571429%;
-  margin-top: 34px;
   padding: 0;
   text-align: center;
 }
@@ -2857,7 +2856,7 @@ p.blogListInputParagraph {
 }
 
 .uc-navbar-container:not(.uc-navbar-transparent) {
-  background: none;
+  background: none !important;
 }
 
 .uc-navbar-left,

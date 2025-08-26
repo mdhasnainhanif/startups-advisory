@@ -6,6 +6,7 @@ import PortofolioSection from '../../components/LogoDesign/PortofolioSection'
 import DevelopmentComparison from '../../components/LogoDesign/DevelopmentComparison'
 import MarketingSection from '../../components/LogoDesign/MarketingSection'
 import PricingSection from '../../components/LogoDesign/PricingSection'
+import LogosLogoDesign from '../../components/LogoDesign/LogosLogoDesign'
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
       <DevelopmentComparison/>
       <MarketingSection/>
       <PricingSection/>
+      <LogosLogoDesign/>
     </div>
   )
 }
