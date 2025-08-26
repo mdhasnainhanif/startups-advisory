@@ -2857,7 +2857,7 @@ p.blogListInputParagraph {
 }
 
 .uc-navbar-container:not(.uc-navbar-transparent) {
-  background: #f8f8f8;
+  background: none;
 }
 
 .uc-navbar-left,
