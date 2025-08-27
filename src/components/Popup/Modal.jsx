@@ -1,20 +1,24 @@
 "use client";
-import React, { useEffect, useState } from 'react'
-import { useModal } from '../../hooks/useModal';
+import React, { useEffect } from "react";
+import { useModal } from "../../hooks/useModal";
 
 const Modal = () => {
-    const { isOpen, closeModal } = useModal();
+    const { isOpen, openModal, closeModal } = useModal();
 
+    useEffect(() => {
+        // Auto open modal 5 seconds after reload
+        const timer = setTimeout(() => {
+            openModal();
+        }, 5000); // 5000ms = 5 sec (change as you want)
 
+        return () => clearTimeout(timer);
+    }, [openModal]);
 
     return (
         <div>
             {isOpen && (
                 <div>
-                    <div
-                        className="modal-bg show_modal"
-                        onClick={closeModal}
-                    ></div>
+                    <div className="modal-bg show_modal" onClick={closeModal}></div>
                     <div className="custom_modal show_modal" id="welcomeModal">
                         <button
                             className="uc-modal-close-default d-flex items-center top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90 from-close"
@@ -54,7 +58,7 @@ const Modal = () => {
                                                 </div>
                                             </div>
                                             <div className="from-inputs">
-                                                <h5 className="form-input-heading">Your Phone  Number</h5>
+                                                <h5 className="form-input-heading">Your Phone Number</h5>
                                                 <input
                                                     className="form-control h-48px w-100 form-input-area"
                                                     type="Text"
@@ -106,17 +110,20 @@ const Modal = () => {
                                             helps fast-moving teams get high-quality creative.
                                         </p>
                                         <div className="popup-image">
-                                            <img src="assets/images/form-image.webp" alt="Form" />
+                                            <img
+                                                src="assets/images/form-image.webp"
+                                                alt="Form"
+                                            />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div >
-                </div >
+                    </div>
+                </div>
             )}
         </div>
-    )
-}
+    );
+};
 
-export default Modal
+export default Modal;
