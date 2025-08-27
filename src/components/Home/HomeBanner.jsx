@@ -74,7 +74,7 @@ const HomeBanner = () => {
                     style={{ top: "40%", right: "10%" }}
                   >
                     <img
-                       
+
                       decoding="async"
                       className="w-48px lg:w-80px me-4"
                       src="/assets/images/user-cursor-1.svg"
@@ -87,7 +87,7 @@ const HomeBanner = () => {
                     style={{ bottom: "30%", left: "10%" }}
                   >
                     <img
-                       
+
                       decoding="async"
                       className="w-48px lg:w-80px"
                       src="/assets/images/user-cursor-3.svg"
