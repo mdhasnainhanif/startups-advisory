@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
+import { useModal } from "../../hooks/useModal";  
 
 const Cta = (props) => {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div
       id="main_features"
@@ -48,7 +50,7 @@ const Cta = (props) => {
                 {/* CTA Button */}
                 <a
                   className="button-green open-modal-btn"
-                  data-modal-target="#welcomeModal"
+                  onClick={openModal}
                 >
                   Claim Your Free Strategy Session
                 </a>

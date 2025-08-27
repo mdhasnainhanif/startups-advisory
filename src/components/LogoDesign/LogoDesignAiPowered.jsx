@@ -2,8 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+import { useModal } from "../../hooks/useModal";
 
 const LogoDesignAiPowered = () => {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div
       id="main_features"
@@ -85,7 +87,7 @@ const LogoDesignAiPowered = () => {
                 {/* CTA Button */}
                 <a
                   className="button-green mt-2 open-modal-btn"
-                  data-modal-target="#welcomeModal"
+                  onClick={openModal}
                   href="#"
                 >
                   Claim Your Free Strategy Session

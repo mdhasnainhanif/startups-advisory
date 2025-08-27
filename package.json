@@ -16,7 +16,8 @@
     "react-dom": "19.1.0",
     "react-modal-video": "^2.0.2",
     "swiper": "^11.2.10",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@types/node": "24.3.0",

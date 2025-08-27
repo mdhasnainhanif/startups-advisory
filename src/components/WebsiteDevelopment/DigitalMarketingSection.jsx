@@ -1,7 +1,10 @@
+"use client";
 // DigitalMarketingSection.jsx
 import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 const DigitalMarketingSection = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="main_features"
@@ -64,8 +67,8 @@ const DigitalMarketingSection = () => {
                                 {/* CTA Button */}
                                 <a
                                     className="button-green open-modal-btn mt-2"
-                                    data-modal-target="#welcomeModal"
-                                    href="#welcomeModal"
+                                    onClick={openModal}
+                                    href="#"
                                 >
                                     Claim Your Free Strategy Session
                                 </a>

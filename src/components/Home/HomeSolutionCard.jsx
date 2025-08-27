@@ -1,9 +1,12 @@
 "use client";
+import { useModal } from "../../hooks/useModal";
 import Image from "next/image";
+import React from "react";
 import { useState } from "react";
 
 const HomeSolutionsSection = () => {
   const [activeIndex, setActiveIndex] = useState(1);
+  const openModal = useModal((state) => state.openModal);
 
   const cards = [
     {
@@ -207,7 +210,7 @@ const HomeSolutionsSection = () => {
           <div className="d-flex items-center justify-center">
             <a
               className="button-green mt-6 open-modal-btn"
-              data-modal-target="#welcomeModal"
+              onClick={openModal}
             >
               Claim Your Free Strategy Session
             </a>

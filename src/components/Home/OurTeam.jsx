@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useModal } from "../../hooks/useModal";
 
 const teamMembers = [
   {
@@ -47,6 +48,7 @@ const teamMembers = [
 ];
 
 const OurTeam = () => {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div id="about-team" className="about-team section panel overflow-hidden section-padding">
       <div className="section-outer panel">
@@ -96,9 +98,13 @@ const OurTeam = () => {
               </div>
 
               {/* CTA Button */}
-              <a className="button-Purple open-modal-btn" data-modal-target="#welcomeModal">
+              <button
+                type="button"
+                className="button-Purple open-modal-btn"
+                onClick={openModal}
+              >
                 Claim Your Free Strategy Session
-              </a>
+              </button>
             </div>
           </div>
         </div>

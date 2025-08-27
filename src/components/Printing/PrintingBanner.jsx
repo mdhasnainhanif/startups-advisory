@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Form from "../../components/Form/Form";
+import { useModal } from "../../hooks/useModal";
 
 const PrintingBanner = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="overview"
@@ -56,13 +58,12 @@ const PrintingBanner = () => {
                                         className="vstack sm:hstack gap-1 lg:gap-2 mt-1 sm:mt-2 ipad-banner-button d-flex"
                                         style={{ flexDirection: "row" }}
                                     >
-                                        <a
-                                            href="#"
+                                        <button
                                             className="button-green open-modal-btn"
-                                            data-modal-target="#welcomeModal"
+                                            onClick={openModal}
                                         >
                                             Build My AI-Enhanced Website
-                                        </a>
+                                        </button>
                                     </div>
 
                                 </div>

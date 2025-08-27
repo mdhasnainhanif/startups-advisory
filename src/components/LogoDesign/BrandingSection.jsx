@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
+import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 export default function BrandingSection() {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div
       id="main_features"
@@ -45,7 +49,7 @@ export default function BrandingSection() {
 
                 <a
                   className="button-green mt-2 open-modal-btn"
-                  data-modal-target="#welcomeModal"
+                  onClick={openModal}
                 >
                   Claim Your Free Strategy Session
                 </a>

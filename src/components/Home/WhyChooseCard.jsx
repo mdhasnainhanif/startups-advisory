@@ -1,7 +1,9 @@
 "use client";
+import { useModal } from "../../hooks/useModal";
 import Image from "next/image";
-
+import React from "react";
 export default function WhyChooseCard() {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div id="features" className="features section panel section-padding">
       <div className="section-outer panel">
@@ -62,7 +64,7 @@ export default function WhyChooseCard() {
 
                     <a
                       className="button-green mt-2 open-modal-btn"
-                      data-modal-target="#welcomeModal"
+                      onClick={openModal}
                     >
                       BOOK A FREE STRATEGY SESSION NOW
                     </a>
@@ -167,7 +169,7 @@ export default function WhyChooseCard() {
 
                 <div className="case-image p-0">
                   <img
-                    
+
                     src="/assets/images/img.jpg"
                     alt="team"
                     className="rounded"

@@ -2,8 +2,10 @@
 
 import React from "react";
 import Form from "../Form/Form";
+import { useModal } from "../../hooks/useModal";
 
 const LogoDesignBanner = () => {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div
       id="overview"
@@ -68,7 +70,7 @@ const LogoDesignBanner = () => {
                   >
                     <a
                       className="button-green open-modal-btn"
-                      data-modal-target="#welcomeModal"
+                      onClick={openModal}
                       href="#"
                     >
                       Claim Your Free Strategy Session

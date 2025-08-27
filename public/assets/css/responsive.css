@@ -154,7 +154,7 @@
     .pricingCardContent h1 sub,
     .pricingCardContentTwo h1 sub,
     .pricingCardContentThree h1 sub {
-        bottom: 6.5rem;
+        bottom: 7.5rem !important;
     }
 
     .pricingCardContentThree::before {
@@ -175,7 +175,7 @@
     }
 
     .portofiol-fancy-box-01 {
-        margin-top: -3.5rem;
+        margin-top: -3.5rem !important;
     }
 
     .servicesCardsNew {
@@ -230,7 +230,7 @@
     }
 
     .ai-traditional-all-cards {
-        display: flex;
+        display: flex !important;
     }
 
     .hideOnIpad {
@@ -449,10 +449,10 @@
     .ai-traditional-cards-02,
     .ai-traditional-cards-03,
     .ai-traditional-cards-04 {
-        border-top-right-radius: 24px;
-        border-bottom-right-radius: 24px;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
+        border-top-right-radius: 24px !important;
+        border-bottom-right-radius: 24px !important;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
         height: 100%;
         place-content: center;
     }
@@ -466,11 +466,11 @@
 
     .portofiol-fancy-box-01,
     .portofiol-fancy-box-04 {
-        margin-top: -6rem;
+        margin-top: -6rem !important;
     }
 
     .ai-traditional-all-cards-container {
-        display: flex;
+        display: flex !important;
     }
 
     .caseStudyCard {
@@ -703,7 +703,7 @@
     }
 
     .ai-traditional-all-cards {
-        display: none;
+        display: none !important;
     }
 
     .fixed-line {
@@ -722,9 +722,14 @@
 }
 
 @media (max-width: 576px) {
+    .ai-traditional-cards-01-content h3 {
+        font-size: 2rem !important;
+    }
+
     .logoDesignLogos .row {
         gap: 2rem;
-      }
+    }
+
     .uc-offcanvas-bar {
         left: -350px;
         width: 350px;
@@ -806,11 +811,11 @@
 
     .portofiol-fancy-box-01,
     .portofiol-fancy-box-03 {
-        margin-top: 0rem;
+        margin-top: 0rem !important;
     }
 
     .portofiol-fancy-box-04 {
-        margin-top: -8rem;
+        margin-top: -8rem !important;
     }
 
     .portofiol-fancy-box-main>div {
@@ -904,7 +909,7 @@
     .ai-traditional-cards-03,
     .ai-traditional-cards-04 {
         padding: 1rem !important;
-        width: unset;
+        width: unset !important;
     }
 
     .ai-traditional-cards-01 {

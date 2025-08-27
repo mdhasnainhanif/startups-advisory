@@ -2,8 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+import { useModal } from "../../hooks/useModal";
 
 const AboutBanner = () => {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div
       id="overview"
@@ -57,7 +59,7 @@ const AboutBanner = () => {
                   <div className="sm:hstack gap-1 lg:gap-2 mt-1 sm:mt-2 ipad-banner-button">
                     <a
                       className="button-green open-modal-btn"
-                      data-modal-target="#welcomeModal"
+                      onClick={openModal}
                       href="#"
                     >
                       Claim Your Free Strategy Session
@@ -85,4 +87,3 @@ const AboutBanner = () => {
 };
 
 export default AboutBanner;
- 

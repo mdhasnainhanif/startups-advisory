@@ -1,7 +1,9 @@
+"use client";
 // src/components/PricingBanner.jsx
 import React from "react";
-
+import { useModal } from "../../hooks/useModal";
 const PricingBanner = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="overview"
@@ -61,9 +63,9 @@ const PricingBanner = () => {
                                         className="vstack sm:hstack gap-1 lg:gap-2 ipad-banner-button d-flex justify-center"
                                         style={{ flexDirection: "row" }}
                                     >
-                                        <a className="button-green" href="#">
+                                        <button className="button-green" href="#" onClick={openModal}>
                                             Build My AI-Enhanced Website
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

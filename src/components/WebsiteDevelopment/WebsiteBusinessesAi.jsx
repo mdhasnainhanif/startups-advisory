@@ -1,7 +1,10 @@
+"use client";
 // WebsiteBusinessesAi.jsx
 import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 const WebsiteBusinessesAi = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="main_features"
@@ -46,8 +49,7 @@ const WebsiteBusinessesAi = () => {
 
                                 <a
                                     className="button-green open-modal-btn mt-2"
-                                    data-modal-target="#welcomeModal"
-                                    href="#welcomeModal"
+                                    onClick={openModal}
                                 >
                                     Claim Your Free Strategy Session
                                 </a>

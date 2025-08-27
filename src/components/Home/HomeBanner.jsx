@@ -3,10 +3,14 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import { useModal } from "../../hooks/useModal";
+
 
 const HomeBanner = () => {
   const typedRef = useRef(null); // span element ke liye
   const typedInstance = useRef(null); // typed instance cleanup ke liye
+  const openModal = useModal((state) => state.openModal);
+  
 
   useEffect(() => {
     if (!typedRef.current) return;
@@ -22,6 +26,7 @@ const HomeBanner = () => {
       backSpeed: 30,
       backDelay: 1500,
       loop: true,
+      showCursor: false,
     });
 
     return () => {
@@ -125,7 +130,7 @@ const HomeBanner = () => {
                   {/* Button */}
                   <div className="vstack sm:hstack gap-1 lg:gap-2 mt-1 sm:mt-2 ipad-banner-button justify-center items-center">
                     <a
-                      data-modal-target="#welcomeModal"
+                      onClick={openModal}
                       className="button-green mt-2 open-modal-btn"
                     >
                       Claim Your Free Strategy Session

@@ -1,7 +1,10 @@
+"use client";
 // WebsiteBuildOnlineSuccess.jsx
 import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 const WebsiteBuildOnlineSuccess = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="main_features"
@@ -53,8 +56,7 @@ const WebsiteBuildOnlineSuccess = () => {
 
                                 <a
                                     className="button-green open-modal-btn mt-2"
-                                    data-modal-target="#welcomeModal"
-                                    href="#welcomeModal"
+                                    onClick={openModal}
                                 >
                                     Claim Your Free Strategy Session
                                 </a>

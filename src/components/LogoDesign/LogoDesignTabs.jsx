@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { useModal } from "../../hooks/useModal";
 
 const tabsData = [
   {
@@ -53,8 +54,8 @@ const tabsData = [
     imgAlt: "Emblem Logo",
   },
 ];
-
 export default function LogoDesignTabs() {
+  const openModal = useModal((state) => state.openModal);
   const [active, setActive] = useState("positioning-strategy"); // default to your original active
 
   const handleKeyDown = (e) => {
@@ -155,7 +156,7 @@ export default function LogoDesignTabs() {
                             {p}
                           </p>
                         ))}
-                        <a className="button-green mt-2 open-modal-btn" data-modal-target="#welcomeModal">
+                        <a className="button-green mt-2 open-modal-btn" onClick={openModal} >
                           Claim Your Free Strategy Session
                         </a>
                       </div>

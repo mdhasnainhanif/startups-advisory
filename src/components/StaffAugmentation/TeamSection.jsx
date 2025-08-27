@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useModal } from "../../hooks/useModal";
 
 const DEFAULT_SOCIALS = [
   "/assets/images/team-social-icon-01.svg",
@@ -11,17 +12,18 @@ const DEFAULT_SOCIALS = [
 ];
 
 const TEAM = [
-  { name: "Mark Zellers",  role: "Founder & CEO",       img: "/assets/images/team-01.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
-  { name: "John Zellers",  role: "Co-Founder",          img: "/assets/images/team-02.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
-  { name: "Kim Yun Son",   role: "Engineering Manager", img: "/assets/images/team-03.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
-  { name: "André Garcia",  role: "Product Manager",     img: "/assets/images/team-04.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
-  { name: "Peter Lary",    role: "UX Researcher",       img: "/assets/images/team-05.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
-  { name: "Henry Matt",    role: "Customer Success",    img: "/assets/images/team-06.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
-  { name: "Natalia",       role: "Lead of fun",         img: "/assets/images/team-07.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
-  { name: "Larry",         role: "Director of Joy",     img: "/assets/images/team-08.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "Mark Zellers", role: "Founder & CEO", img: "/assets/images/team-01.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "John Zellers", role: "Co-Founder", img: "/assets/images/team-02.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "Kim Yun Son", role: "Engineering Manager", img: "/assets/images/team-03.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "André Garcia", role: "Product Manager", img: "/assets/images/team-04.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "Peter Lary", role: "UX Researcher", img: "/assets/images/team-05.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "Henry Matt", role: "Customer Success", img: "/assets/images/team-06.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "Natalia", role: "Lead of fun", img: "/assets/images/team-07.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
+  { name: "Larry", role: "Director of Joy", img: "/assets/images/team-08.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", socials: DEFAULT_SOCIALS },
 ];
 
 export default function TeamSection() {
+  const openModal = useModal((state) => state.openModal);
   return (
     <div id="about-team" className="about-team section panel overflow-hidden section-padding">
       <div className="section-outer panel">
@@ -88,7 +90,7 @@ export default function TeamSection() {
                 </div>
               </div>
 
-              <a className="button-green mt-4 open-modal-btn" data-modal-target="#welcomeModal" href="#welcomeModal">
+              <a className="button-green mt-4 open-modal-btn" onClick={openModal}>
                 Claim Your Free Strategy Session
               </a>
             </div>

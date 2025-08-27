@@ -1157,9 +1157,9 @@ header.uc-header.header-six>.uc-navbar-sticky .uc-navbar-main .uc-navbar {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 25px;
+  bottom: 22px;
   width: calc(100% + 12px);
-  max-width: 140%;
+  max-width: 70%;
   height: 1.52px;
   background: #0fdac2;
   pointer-events: none;

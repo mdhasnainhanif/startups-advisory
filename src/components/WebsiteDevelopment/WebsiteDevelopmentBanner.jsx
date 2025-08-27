@@ -1,8 +1,10 @@
+"use client";
 // WebsiteDevelopmentBanner.jsx
 import React from "react";
 import Form from "../../components/Form/Form";
-
+import { useModal } from "../../hooks/useModal";
 const WebsiteDevelopmentBanner = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <section
             id="overview"
@@ -52,7 +54,7 @@ const WebsiteDevelopmentBanner = () => {
                                     >
                                         <a
                                             className="button-green open-modal-btn mt-2"
-                                            data-modal-target="#welcomeModal"
+                                            onClick={openModal}
                                             href="#"
                                         >
                                             Build My AI-Enhanced Website

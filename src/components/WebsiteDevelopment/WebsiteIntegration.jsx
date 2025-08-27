@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 const icons = [
     "icon-01.svg",
@@ -22,8 +24,9 @@ const icons = [
     "icon-17.svg",
     "icon-10.svg", // duplicate from original
 ];
-
 export default function WebsiteIntegration() {
+
+    const openModal = useModal((state) => state.openModal);
     return (
         <div className="container sm:max-w-lg xl:max-w-xl section-padding">
             <div className="section-inner panel">
@@ -72,8 +75,7 @@ export default function WebsiteIntegration() {
                 {/* CTA Button */}
                 <div className="d-flex justify-center mt-4">
                     <a
-                        className="button-green mt-4 open-modal-btn mx-auto"
-                        data-modal-target="#welcomeModal"
+                        className="button-green mt-4 open-modal-btn mx-auto" onClick={openModal}
                     >
                         Claim Your Free Strategy Session
                     </a>

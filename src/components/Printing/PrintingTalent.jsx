@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 const PrintingTalent = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="main_features"
@@ -59,8 +61,7 @@ const PrintingTalent = () => {
 
                                 {/* Button */}
                                 <a
-                                    className="button-green mt-2 open-modal-btn"
-                                    data-modal-target="#welcomeModal"
+                                    className="button-green mt-2 open-modal-btn" onClick={openModal}
                                 >
                                     Claim Your Free Strategy Session
                                 </a>

@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useModal } from "../../hooks/useModal";
 
 const Header = () => {
+  const openModal = useModal((state) => state.openModal);
   // Sticky classes + styles on scroll (with enter/exit animations)
   useEffect(() => {
     const headerEl = document.querySelector(".uc-header");
@@ -303,7 +305,7 @@ const Header = () => {
                 <div className="uc-navbar-right">
                   <button
                     className="button-Purple buttonPurpleResponsive open-modal-btn"
-                    data-modal-target="#welcomeModal"
+                    onClick={openModal}
                   >
                     <span>Free Strategy Session</span>
                   </button>

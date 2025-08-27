@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useModal } from "../../hooks/useModal";
 
 const WebsiteSolutionsCards = () => {
     const [activeTab, setActiveTab] = useState("all");
@@ -55,12 +56,11 @@ const WebsiteSolutionsCards = () => {
             categories: ["all", "e-commerce-development", "business-portal"],
         },
     ];
-
+    const openModal = useModal((state) => state.openModal);
     // Filter cards based on active tab
     const filteredCards = cardData.filter(
         (card) => activeTab === "all" || card.categories.includes(activeTab)
     );
-
     return (
         <div
             id="main_features"
@@ -136,7 +136,7 @@ const WebsiteSolutionsCards = () => {
 
                     {/* Call to Action */}
                     <div className="d-flex items-center justify-center">
-                        <a className="button-green mt-6 open-modal-btn" data-modal-target="#welcomeModal">
+                        <a className="button-green mt-6 open-modal-btn" onClick={openModal}>
                             Claim Your Free Strategy Session
                         </a>
                     </div>

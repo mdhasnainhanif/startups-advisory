@@ -1,7 +1,10 @@
+"use client";
 // WebsiteDevelopmentTraditional.jsx
 import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 const WebsiteDevelopmentTraditional = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="main_features"
@@ -79,8 +82,8 @@ const WebsiteDevelopmentTraditional = () => {
                                 {/* CTA Button */}
                                 <a
                                     className="button-green open-modal-btn mt-2"
-                                    data-modal-target="#welcomeModal"
-                                    href="#welcomeModal"
+                                    href="#"
+                                    onClick={openModal}
                                 >
                                     Claim Your Free Strategy Session
                                 </a>

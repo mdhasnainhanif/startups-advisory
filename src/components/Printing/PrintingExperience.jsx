@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import { useModal } from "../../hooks/useModal";
 
 const PrintingExperience = () => {
+    const openModal = useModal((state) => state.openModal);
     return (
         <div
             id="main_features"
@@ -116,7 +118,7 @@ const PrintingExperience = () => {
 
                         {/* CTA Button */}
                         <div className="d-flex justify-center mt-4">
-                            <a className="button-green open-modal-btn" data-modal-target="#welcomeModal">
+                            <a className="button-green open-modal-btn" onClick={openModal}>
                                 Claim Your Free Strategy Session
                             </a>
                         </div>

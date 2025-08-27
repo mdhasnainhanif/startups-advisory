@@ -8,7 +8,7 @@ const blogData = [
         date: "01/01/2025",
         title: "Lorem ipsum dolor sit amet.",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
-        link: "blog.php",
+        link: "/blog",
     },
     {
         img: "assets/images/blog-02.webp",
@@ -16,7 +16,7 @@ const blogData = [
         date: "01/01/2025",
         title: "Lorem ipsum dolor sit amet.",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
-        link: "blog.php",
+        link: "/blog",
     },
     {
         img: "assets/images/blog-03.webp",
@@ -24,7 +24,7 @@ const blogData = [
         date: "01/01/2025",
         title: "Lorem ipsum dolor sit amet.",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
-        link: "blog.php",
+        link: "/blog",
     },
 ];
 
