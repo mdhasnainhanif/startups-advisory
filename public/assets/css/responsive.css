@@ -274,7 +274,7 @@
     }
 
     .banner-margin {
-        margin: 0rem;
+        margin: 0rem !important;
     }
 
     .about-cards {
@@ -1046,7 +1046,8 @@
     }
 
     .homeBanner {
-        padding-top: 6rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     .nav-y .button-green {
