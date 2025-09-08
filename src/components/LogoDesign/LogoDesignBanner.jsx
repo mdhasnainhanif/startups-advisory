@@ -50,17 +50,16 @@ const LogoDesignBanner = () => {
                     className="h3 lg:h2 xl:h1 m-0 text-black font-size-on-ipad"
                     style={{ fontSize: "55px" }}
                   >
-                    Logo Design Services
+                   Smart, Strategic
                     <span className="d-inline-flex px-1 bg-primary text-white -rotate-1 lg:-rotate-2 rounded-1 lg:rounded-1-5">
                       Logo Design
                     </span>{" "}
-                    Services
+                     That Drives Business
                   </p>
 
                   {/* Paragraph */}
                   <p className="fs-5 xl:fs-4 text-black dark:text-black md:d-block banner-paragraph">
-                    Get smart, stunning logos created with AI-driven speed and
-                    designer finesse.
+                     Go beyond aesthetics. Our logos are built to establish authority, strengthen trust, and create measurable market impact from day one.
                   </p>
 
                   {/* CTA Button */}

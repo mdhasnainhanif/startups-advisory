@@ -34,7 +34,7 @@ const AboutCards = () => {
                   <img src="assets/images/cout-card-01.svg" className="datDevCard-icon mb-4" alt="" />
                   <h4 className="cout-heading">Goal-Driven Transparency</h4>
                   <p className="cout-paragraph">
-                    We believe in open, honest communication aimed at achieving your goals. You’ll always know what we’re.
+                    We believe in open, honest communication aimed at achieving your goals. You’ll always know what we’re working on and why.
                   </p>
                   <button className="cout-button">Explore</button>
                 </div>
@@ -45,7 +45,7 @@ const AboutCards = () => {
                   <img src="assets/images/cout-card-02.svg" className="datDevCard-icon mb-4" alt="" />
                   <h4 className="cout-heading">Creativity with Purpose</h4>
                   <p className="cout-paragraph">
-                    We believe in open, honest communication aimed at achieving your goals. You’ll always know what we’re.
+                    Our solutions blend strategy with creativity—ensuring that every project doesn’t just look good but drives measurable results.
                   </p>
                   <button className="cout-button">Explore</button>
                 </div>
@@ -56,7 +56,7 @@ const AboutCards = () => {
                   <img src="assets/images/cout-card-03.svg" className="datDevCard-icon mb-4" alt="" />
                   <h4 className="cout-heading">Collaboration First</h4>
                   <p className="cout-paragraph">
-                    We believe in open, honest communication aimed at achieving your goals. You’ll always know what we’re.
+                    We work as an extension of your team, building partnerships that make execution seamless and outcomes stronger.
                   </p>
                   <button className="cout-button">Explore</button>
                 </div>

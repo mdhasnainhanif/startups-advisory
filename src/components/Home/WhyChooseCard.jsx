@@ -23,12 +23,12 @@ export default function WhyChooseCard() {
               <h2 className="h3 lg:h2 xl:h1 m-0 px-2 text-black">
                 Why
                 <span className="d-inline-flex px-1 bg-primary text-white -rotate-1 lg:-rotate-2 rounded-1 lg:rounded-1-5">
-                  Startups Advisory
+                  Choose
                 </span>
+                Startups Advisory
               </h2>
               <p className="fs-6 xl:fs-5 text-black dark:text-white text-opacity-70">
-                Unleash your creativity with our builder's powerful features and
-                intuitive interface, experience the difference.
+                Solopreneurs choose us because we make starting and scaling simple — without overwhelm.
               </p>
             </div>
 
@@ -50,10 +50,10 @@ export default function WhyChooseCard() {
 
                     <div className="panel vstack gap-2 mt-3 bewBulletPoints">
                       {[
-                        "Battle-Tested Experience Meets Modern Innovation: 25+ years of brand-building expertise fused with bleeding-edge AI implementations.",
-                        "Real Business Results: Our clients average a 40% boost in marketing efficiency and slash CAC by 25%.",
-                        "Precision-Built Strategies: Each solution is tailored to your growth bottlenecks—using deep-dive audits and AI-enhanced insights.",
-                        "Full-Funnel Execution: From brand positioning to post-campaign analysis—we handle the entire lifecycle.",
+                        "Affordable Solutions",
+                        "Time-Saving Support",
+                        "Tailored to You",
+                        "A Partner That Gets It",
                       ].map((text, i) => (
                         <div key={i} className="hstack gap-1 lg:fs-5">
                           <i className="cstack w-16px h-16px text-white rounded-circle unicon-checkmark fw-bold for-color"></i>
@@ -105,10 +105,10 @@ export default function WhyChooseCard() {
                       </h4>
                       <div className="panel vstack gap-2">
                         {[
-                          "25 Years of Proven Performance",
-                          "Award-Winning Design & Strategy",
-                          "AI-Certified Marketing Leadership",
-                          "Consistent ROI Delivery",
+                          "100+ Solopreneurs Supported Worldwide",
+                          "Websites and Brands Launched in 12+ Industries",
+                          "Global Network of On-Demand Talent",
+                          "Proven Track Record of Helping Ideas Become Businesses",
                         ].map((text, i) => (
                           <div key={i} className="hstack gap-1 lg:fs-5">
                             <i className="cstack w-16px h-16px text-white rounded-circle unicon-checkmark fw-bold"></i>
@@ -133,12 +133,10 @@ export default function WhyChooseCard() {
                   data-anime="onview: -100; targets: >*; translateY: [16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});"
                 >
                   <h2 className="h3 lg:h3 xl:h2 m-0 text-white">
-                    Client Case Study:
+                    Your Business Dreams, Made Real.
                   </h2>
                   <p>
-                    Startupsadvisory transformed our entire growth strategy.
-                    Within 90 days, we saw a 60% increase in qualified leads.
-                    This is marketing that actually performs.
+                   With Startup Advisory, you don’t just get services — you get a partner who believes in your vision.With Startup Advisory, you don’t just get services — you get a partner who believes in your vision
                   </p>
                   <Image
                     priority

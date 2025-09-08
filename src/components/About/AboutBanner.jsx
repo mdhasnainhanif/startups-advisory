@@ -42,17 +42,12 @@ const AboutBanner = () => {
 
                   {/* Main Heading */}
                   <h1 className="h1 sm:display-6 md:display-5 lg:display-4 xl:display-5 m-0 text-black banner-heading">
-                    Strategy, Design &amp; Innovation
+                    Ready to Transform Your Brand, Product, or Process
                   </h1>
 
                   {/* Description */}
                   <p className="fs-5 xl:fs-4 text-black dark:text-black md:d-block banner-paragraph">
-                    We are a future-forward team of creatives, strategists, and
-                    technologists who believe in building brands that inspire,
-                    connect, and perform. With a focus on purpose-driven
-                    storytelling and intelligent design, we help businesses
-                    shape identities that go beyond trends and build lasting
-                    impact.
+                    Whether you’re starting from scratch or scaling what’s already working, we’re here to make it better. Let’s collaborate on a solution that’s bold, strategic, built to grow with you.
                   </p>
 
                   {/* CTA */}
