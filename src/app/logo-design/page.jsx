@@ -20,32 +20,32 @@ const page = () => {
   const timelineCards = [
     {
       step: "01",
-      title: "Clarify Your Vision",
-      desc: "We uncover what matters most to you and your business goals.",
+      title: "Discovery & Positioning",
+      desc: "We audit your market and align your brand identity with clear growth objectives.",
       img: "/assets/images/proces-icon-1.svg",
     },
     {
       step: "02",
-      title: "Build Your Foundation",
-      desc: "From logos to websites, we create the essentials to get you moving fast.",
+      title: "Concept Development",
+      desc: "Multiple logo directions crafted with precision to reflect your business DNA.",
       img: "/assets/images/proces-icon-2.svg",
     },
     {
       step: "03",
-      title: "Launch With Confidence",
-      desc: "We put your brand out into the world looking polished and professional.",
+      title: "Refinement & Testing",
+      desc: "We validate design concepts for clarity, versatility, and audience recognition.",
       img: "/assets/images/proces-icon-3.svg",
     },
     {
       step: "04",
-      title: "Stay Visible",
-      desc: "Your brand stays consistent across every platform so customers recognize you.",
+      title: "Multi-Channel Readiness",
+      desc: "Logos are optimized for digital, print, and every channel your business touches.",
       img: "/assets/images/proces-icon-4.svg",
     },
     {
       step: "05",
-      title: "Grow Without Burnout",
-      desc: "As you scale, we provide support that saves time and keeps you focused.",
+      title: "Final Delivery & Assets",
+      desc: "Receive a complete, scalable system with guidelines to ensure long-term brand consistency.",
       img: "/assets/images/proces-icon-5.svg",
     },
   ];
@@ -56,7 +56,32 @@ const page = () => {
       <LogoDesignTabs/>
       <PortofolioSection/>
       <DevelopmentComparison/>
-      <MarketingSection/>
+      <MarketingSection
+  tag="AI Powered Growth"
+  heading="Generic Logos Won’t Deliver"
+  highlight="ROI."
+  subheading="Here’s Why."
+  cards={[
+    {
+      title: "Custom work will take time",
+      description: "Custom work requires time — but without strategy, even polished visuals fail to win market share or deliver measurable impact.",
+    },
+    {
+      title: "AI can’t think for your business",
+      description: [
+        "AI templates alone can’t build authority. Only professional design rooted in market context creates a brand buyers trust.",
+      ],
+    },
+  ]}
+  secondaryCard={{
+    title: "Custom work needs skilled humans",
+    description: [
+      "Logos must combine creativity with strategy. Our team blends AI efficiency with human expertise to deliver brand assets that pay back.",
+    ],
+  }}
+  buttonText="Let the magician handle the magic"
+/>
+
       <PricingSection/>
       <LogosLogoDesign/>
       <BrandingSection/>

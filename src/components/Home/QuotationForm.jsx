@@ -7,58 +7,58 @@ const QuotationForm = ({
   heading = "Get a Quote Now",
   subHeading = "Contact Us",
   description = "Have a question or feedback? Fill out the form below, and we'll get back to you as soon as possible.",
-  faqs=[
-            {
-              question: "Who do you work with—startups or established businesses?",
-              answer:
-                "Both. We partner with solopreneurs who need a reliable growth partner, as well as enterprises looking to scale with speed, strategy, and impact.",
-            },
-            {
-              question: "How are you different from traditional agencies?",
-              answer:
-                "We blend human creativity with AI-powered efficiency. That means faster turnaround times, cost-effective solutions, and strategies designed to actually convert.",
-            },
-            {
-              question: "Do I need to be tech-savvy to work with you?",
-              answer:
-                "Not at all. Whether you’re a founder with no tech background or a corporate team with in-house developers, we adapt to your level and simplify the process.",
-            },
-            {
-              question: "What industries do you specialize in?",
-              answer:
-                "We’re industry-agnostic. From SaaS startups to retail, consulting firms to creators—we’ve delivered successful projects across 20+ verticals.",
-            },
-            {
-              question: "How quickly can you start on a project?",
-              answer:
-                "Most engagements kick off within 1–2 weeks after alignment on scope. For urgent projects, we can accelerate timelines with our flexible team structure.",
-            },
-            {
-              question: "Do you only provide strategy, or do you also execute?",
-              answer:
-                "We do both. From high-level brand strategy to hands-on design, development, and marketing execution—we stay with you until results are delivered.",
-            },
-            {
-              question: "How do you ensure collaboration with my team?",
-              answer:
-                "We work as your extended team. Regular check-ins, transparent reporting, and dedicated account managers ensure smooth communication and alignment.",
-            },
-            {
-              question: "Are your solutions affordable for solopreneurs?",
-              answer:
-                "Yes. We design flexible packages so founders can access professional-grade strategy, design, and tech support without enterprise-level costs.",
-            },
-            {
-              question: "Can you handle large-scale, enterprise-level projects?",
-              answer:
-                "Absolutely. Our team structure allows us to scale talent and resources quickly to meet complex, multi-channel enterprise demands.",
-            },
-            {
-              question: "What’s the best way to get started?",
-              answer:
-                "Book a free strategy session with us. We’ll understand your goals, assess your needs, and map a roadmap—whether you’re a one-person startup or a global team.",
-            },
-          ],
+  faqs = [
+    {
+      question: "Who do you work with—startups or established businesses?",
+      answer:
+        "Both. We partner with solopreneurs who need a reliable growth partner, as well as enterprises looking to scale with speed, strategy, and impact.",
+    },
+    {
+      question: "How are you different from traditional agencies?",
+      answer:
+        "We blend human creativity with AI-powered efficiency. That means faster turnaround times, cost-effective solutions, and strategies designed to actually convert.",
+    },
+    {
+      question: "Do I need to be tech-savvy to work with you?",
+      answer:
+        "Not at all. Whether you’re a founder with no tech background or a corporate team with in-house developers, we adapt to your level and simplify the process.",
+    },
+    {
+      question: "What industries do you specialize in?",
+      answer:
+        "We’re industry-agnostic. From SaaS startups to retail, consulting firms to creators—we’ve delivered successful projects across 20+ verticals.",
+    },
+    {
+      question: "How quickly can you start on a project?",
+      answer:
+        "Most engagements kick off within 1–2 weeks after alignment on scope. For urgent projects, we can accelerate timelines with our flexible team structure.",
+    },
+    {
+      question: "Do you only provide strategy, or do you also execute?",
+      answer:
+        "We do both. From high-level brand strategy to hands-on design, development, and marketing execution—we stay with you until results are delivered.",
+    },
+    {
+      question: "How do you ensure collaboration with my team?",
+      answer:
+        "We work as your extended team. Regular check-ins, transparent reporting, and dedicated account managers ensure smooth communication and alignment.",
+    },
+    {
+      question: "Are your solutions affordable for solopreneurs?",
+      answer:
+        "Yes. We design flexible packages so founders can access professional-grade strategy, design, and tech support without enterprise-level costs.",
+    },
+    {
+      question: "Can you handle large-scale, enterprise-level projects?",
+      answer:
+        "Absolutely. Our team structure allows us to scale talent and resources quickly to meet complex, multi-channel enterprise demands.",
+    },
+    {
+      question: "What’s the best way to get started?",
+      answer:
+        "Book a free strategy session with us. We’ll understand your goals, assess your needs, and map a roadmap—whether you’re a one-person startup or a global team.",
+    },
+  ],
 }) => {
   const [openIndex, setOpenIndex] = useState(0);
   const contentRefs = useRef([]);
@@ -75,7 +75,13 @@ const QuotationForm = ({
       const el = contentRefs.current[i];
       return el ? el.scrollHeight : 0;
     });
-    setHeights(hs);
+
+    // ✅ only update if heights actually changed (prevents infinite loop)
+    setHeights((prev) => {
+      const isSame =
+        prev.length === hs.length && prev.every((val, idx) => val === hs[idx]);
+      return isSame ? prev : hs;
+    });
   };
 
   useEffect(() => {
@@ -103,7 +109,9 @@ const QuotationForm = ({
               <div className="panel vstack items-center gap-2 xl:gap-3 text-center">
                 <div className="cstack gap-1 py-1 px-3 border rounded-pill">
                   <span className="d-inline-block w-4px h-4px rounded-circle bg-primary"></span>
-                  <span className="fs-8 fw-bold text-uppercase">{subHeading}</span>
+                  <span className="fs-8 fw-bold text-uppercase">
+                    {subHeading}
+                  </span>
                 </div>
                 <p className="h3 lg:h2 xl:h1 m-0 px-2 text-black">
                   {heading.split(" ").map((word, i) =>
@@ -132,15 +140,39 @@ const QuotationForm = ({
                   </p>
                   <div className="row child-cols-12 md:child-cols-6 g-2">
                     <div>
-                      <input className="form-control h-48px w-full" type="text" placeholder="Full name" required />
+                      <input
+                        className="form-control h-48px w-full"
+                        type="text"
+                        placeholder="Full name"
+                        required
+                      />
                     </div>
                     <div>
-                      <input className="form-control h-48px w-full" type="email" placeholder="Your email" required />
+                      <input
+                        className="form-control h-48px w-full"
+                        type="email"
+                        placeholder="Your email"
+                        required
+                      />
                     </div>
                   </div>
-                  <input id="phone-number" className="form-control h-48px w-100" type="tel" placeholder="Phone number" required />
-                  <input className="form-control h-48px w-full" type="text" placeholder="Subject" />
-                  <textarea className="form-control min-h-150px w-full" placeholder="Your message.." required></textarea>
+                  <input
+                    id="phone-number"
+                    className="form-control h-48px w-100"
+                    type="tel"
+                    placeholder="Phone number"
+                    required
+                  />
+                  <input
+                    className="form-control h-48px w-full"
+                    type="text"
+                    placeholder="Subject"
+                  />
+                  <textarea
+                    className="form-control min-h-150px w-full"
+                    placeholder="Your message.."
+                    required
+                  ></textarea>
                   <button className="button-green mt-2 w-100" type="submit">
                     Send Your Query
                   </button>
@@ -156,9 +188,17 @@ const QuotationForm = ({
                         <ul className="uc-accordion">
                           {faqs.map((faq, index) => {
                             const isOpen = openIndex === index;
-                            const maxH = isOpen && heights[index] ? `${heights[index]}px` : "0px";
+                            const maxH =
+                              isOpen && heights[index]
+                                ? `${heights[index]}px`
+                                : "0px";
                             return (
-                              <li key={index} className={`faq-item in-view ${isOpen ? "uc-open" : ""}`}>
+                              <li
+                                key={index}
+                                className={`faq-item in-view ${
+                                  isOpen ? "uc-open" : ""
+                                }`}
+                              >
                                 <a
                                   role="button"
                                   tabIndex={0}
@@ -171,13 +211,16 @@ const QuotationForm = ({
                                 </a>
                                 <div
                                   id={`faq-panel-${index}`}
-                                  ref={(el) => (contentRefs.current[index] = el)}
+                                  ref={(el) =>
+                                    (contentRefs.current[index] = el)
+                                  }
                                   className="uc-accordion-content mt-2"
                                   aria-hidden={!isOpen}
                                   style={{
                                     maxHeight: maxH,
                                     overflow: "hidden",
-                                    transition: "max-height 300ms ease, opacity 300ms ease",
+                                    transition:
+                                      "max-height 300ms ease, opacity 300ms ease",
                                     opacity: isOpen ? 1 : 0,
                                     display: "block",
                                   }}
