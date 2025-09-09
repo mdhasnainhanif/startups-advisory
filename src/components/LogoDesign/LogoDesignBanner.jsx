@@ -70,7 +70,7 @@ const LogoDesignBanner = () => {
                     <a
                       className="button-green open-modal-btn"
                       onClick={openModal}
-                      href="#"
+                       
                     >
                       Claim Your Free Strategy Session
                     </a>

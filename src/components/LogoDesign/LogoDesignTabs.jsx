@@ -4,59 +4,16 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useModal } from "../../hooks/useModal";
 
-const tabsData = [
-  {
-    key: "brand-audit",
-    number: "01",
-    buttonLabel: "Word Mark Logo",
-    heading: "Word Mark Logo",
-    paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-    ],
-    img: "/assets/images/word_mark_logo.png",
-    imgAlt: "Word Mark Logo",
-  },
-  {
-    key: "positioning-strategy",
-    number: "02",
-    buttonLabel: "Mascot Logo",
-    heading: "Mascot Logo",
-    paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-    ],
-    img: "/assets/images/mascot_logo.png",
-    imgAlt: "Mascot Logo",
-  },
-  {
-    key: "visual-identity",
-    number: "03",
-    buttonLabel: "Abstract Logo",
-    heading: "Abstract Logo",
-    paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-    ],
-    img: "/assets/images/abstract_logo.png",
-    imgAlt: "Abstract Logo",
-  },
-  {
-    key: "messaging",
-    number: "04",
-    buttonLabel: "Emblem Logo",
-    heading: "Emblem Logo",
-    paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.",
-    ],
-    img: "/assets/images/emblem_logo.png",
-    imgAlt: "Emblem Logo",
-  },
-];
-export default function LogoDesignTabs() {
+export default function LogoDesignTabs({
+  tag = "What We Offer",
+  heading = "End-to-end branding",
+  highlight = "Tailored Solutions",
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+  buttonText = "Claim Your Free Strategy Session",
+  tabsData = [],
+}) {
   const openModal = useModal((state) => state.openModal);
-  const [active, setActive] = useState("positioning-strategy"); // default to your original active
+  const [active, setActive] = useState(tabsData[0]?.key || "");
 
   const handleKeyDown = (e) => {
     const currentIndex = tabsData.findIndex((t) => t.key === active);
@@ -74,35 +31,25 @@ export default function LogoDesignTabs() {
       <div className="container sm:max-w-lg xl:max-w-xl">
         <div className="section-inner panel">
           {/* Header */}
-          <div
-            className="vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-8 xl:mb-3 max-w-700px mx-auto text-center"
-            data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
-          >
-            <div
-              className="vstack items-center gap-2 xl:gap-3 text-center"
-              data-anime="onview: -100; targets: >*; translateY: [-48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
-              style={{ transform: "translateY(0px)", opacity: 1 }}
-            >
-              <div className="cstack gap-1 py-1 px-3 border rounded-pill" style={{ transform: "translateY(0px)", opacity: 1 }}>
+          <div className="vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-8 xl:mb-3 max-w-700px mx-auto text-center">
+            <div className="vstack items-center gap-2 xl:gap-3 text-center">
+              <div className="cstack gap-1 py-1 px-3 border rounded-pill">
                 <span className="d-inline-block w-4px h-4px rounded-circle bg-primary"></span>
-                <span className="fs-8 fw-bold text-uppercase">What We Offer</span>
+                <span className="fs-8 fw-bold text-uppercase">{tag}</span>
               </div>
 
-              <p className="h3 lg:h2 xl:h1 m-0 px-2 text-black font-size-on-ipad" style={{ transform: "translateY(0px)", opacity: 1 }}>
-                End-to-end branding
+              <p className="h3 lg:h2 xl:h1 m-0 px-2 text-black font-size-on-ipad">
+                {heading}{" "}
                 <span className="d-inline-flex px-1 bg-primary text-white -rotate-1 lg:-rotate-2 rounded-1 lg:rounded-1-5">
-                  Tailored Solutions
+                  {highlight}
                 </span>
               </p>
 
-              <p
-                className="fs-5 xl:fs-4 text-black dark:text-black d-none md:d-block"
-                style={{ transform: "translateY(0px)", opacity: 1 }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-                tellus. Nullam quis imperdiet augue.
-              </p>
+              {description && (
+                <p className="fs-5 xl:fs-4 text-black dark:text-black d-none md:d-block">
+                  {description}
+                </p>
+              )}
             </div>
           </div>
 
@@ -110,7 +57,6 @@ export default function LogoDesignTabs() {
           <div className="row justify-center">
             <ul
               className="nav nav-pills gap-3 mb-3 brand-tab-main"
-              id="pills-tab"
               role="tablist"
               onKeyDown={handleKeyDown}
             >
@@ -120,10 +66,8 @@ export default function LogoDesignTabs() {
                   <li className="nav-item brand-tabs" role="presentation" key={tab.key}>
                     <button
                       className={`nav-link brand-tabs-li ${isActive ? "active" : ""}`}
-                      id={`${tab.key}-tab`}
                       type="button"
                       role="tab"
-                      aria-controls={tab.key}
                       aria-selected={isActive}
                       onClick={() => setActive(tab.key)}
                     >
@@ -136,17 +80,14 @@ export default function LogoDesignTabs() {
             </ul>
 
             {/* Panels */}
-            <div className="tab-content brands-tabs" id="pills-tabContent">
+            <div className="tab-content brands-tabs">
               {tabsData.map((tab) => {
                 const isActive = active === tab.key;
                 return (
                   <div
                     key={tab.key}
                     className={`tab-pane fade ${isActive ? "active show" : ""}`}
-                    id={tab.key}
                     role="tabpanel"
-                    aria-labelledby={`${tab.key}-tab`}
-                    tabIndex={0}
                   >
                     <div className="row items-center">
                       <div className="brand-tab-content">
@@ -156,8 +97,8 @@ export default function LogoDesignTabs() {
                             {p}
                           </p>
                         ))}
-                        <a className="button-green mt-2 open-modal-btn" onClick={openModal} >
-                          Claim Your Free Strategy Session
+                        <a className="button-green mt-2 open-modal-btn" onClick={openModal}>
+                          {buttonText}
                         </a>
                       </div>
                       <div className="brand-tab-image">

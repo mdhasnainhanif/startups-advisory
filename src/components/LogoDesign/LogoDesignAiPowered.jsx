@@ -88,7 +88,7 @@ const LogoDesignAiPowered = () => {
                 <a
                   className="button-green mt-2 open-modal-btn"
                   onClick={openModal}
-                  href="#"
+                   
                 >
                   Claim Your Free Strategy Session
                 </a>

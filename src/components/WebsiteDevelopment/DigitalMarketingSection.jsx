@@ -68,7 +68,7 @@ const DigitalMarketingSection = () => {
                                 <a
                                     className="button-green open-modal-btn mt-2"
                                     onClick={openModal}
-                                    href="#"
+                                     
                                 >
                                     Claim Your Free Strategy Session
                                 </a>

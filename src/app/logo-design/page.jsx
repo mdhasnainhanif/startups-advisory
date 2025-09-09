@@ -49,11 +49,65 @@ const page = () => {
       img: "/assets/images/proces-icon-5.svg",
     },
   ];
+  const logoTabsData = [
+  {
+    key: "positioning-strategy",
+    number: "01",
+    buttonLabel: "Mascot Logo",
+    heading: "Mascot Logo",
+    paragraphs: [
+      "We create mascots that embody your brand personality and build emotional connections with customers. Perfect for companies seeking high memorability.",
+    ],
+    img: "/assets/images/mascot_logo.png",
+    imgAlt: "Mascot Logo",
+  },
+  {
+    key: "brand-audit",
+    number: "02",
+    buttonLabel: "Word Mark Logo",
+    heading: "Word Mark Logo",
+    paragraphs: [
+      "Clean, powerful wordmarks that emphasize your name with authority. Ideal for B2B brands looking to cement trust and recognition.",
+    ],
+    img: "/assets/images/word_mark_logo.png",
+    imgAlt: "Word Mark Logo",
+  },
+  {
+    key: "visual-identity",
+    number: "03",
+    buttonLabel: "Abstract Logo",
+    heading: "Abstract Logo",
+    paragraphs: [
+      "Distinctive marks that capture your essence without being literal. Designed for global scalability and timeless impact.",
+    ],
+    img: "/assets/images/abstract_logo.png",
+    imgAlt: "Abstract Logo",
+  },
+  {
+    key: "messaging",
+    number: "04",
+    buttonLabel: "Emblem Logo",
+    heading: "Emblem Logo",
+    paragraphs: [
+      "Heritage-inspired designs that communicate authority, credibility, and prestige. Suited for industries where tradition and trust matter most.",
+    ],
+    img: "/assets/images/emblem_logo.png",
+    imgAlt: "Emblem Logo",
+  },
+];
+  
   return (
     <div>
       <LogoDesignBanner/>
       <LogoDesignAiPowered/>
-      <LogoDesignTabs/>
+        <LogoDesignTabs
+      tag="What We Offer"
+      heading="End-to-end branding"
+      highlight="Tailored Solutions"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna."
+      buttonText="Claim Your Free Strategy Session"
+      tabsData={logoTabsData}
+    />
       <PortofolioSection/>
       <DevelopmentComparison/>
       <MarketingSection

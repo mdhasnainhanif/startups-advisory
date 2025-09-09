@@ -63,7 +63,7 @@ const PricingBanner = () => {
                                         className="vstack sm:hstack gap-1 lg:gap-2 ipad-banner-button d-flex justify-center"
                                         style={{ flexDirection: "row" }}
                                     >
-                                        <button className="button-green" href="#" onClick={openModal}>
+                                        <button className="button-green"   onClick={openModal}>
                                             Build My AI-Enhanced Website
                                         </button>
                                     </div>

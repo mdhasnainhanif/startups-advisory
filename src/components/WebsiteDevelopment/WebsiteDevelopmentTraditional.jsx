@@ -82,7 +82,7 @@ const WebsiteDevelopmentTraditional = () => {
                                 {/* CTA Button */}
                                 <a
                                     className="button-green open-modal-btn mt-2"
-                                    href="#"
+                                     
                                     onClick={openModal}
                                 >
                                     Claim Your Free Strategy Session

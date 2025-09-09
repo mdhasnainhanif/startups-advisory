@@ -66,19 +66,19 @@ const Footer = () => {
                           <Link href="/blog">Blog</Link>
                         </li>
                         <li>
-                          <a href="#">Features</a>
+                          <a  >Features</a>
                         </li>
                         <li>
-                          <a href="#">Key Goods</a>
+                          <a  >Key Goods</a>
                         </li>
                         <li>
-                          <a href="#">Pro Elements</a>
+                          <a  >Pro Elements</a>
                         </li>
                         <li>
-                          <a href="#">Pricing</a>
+                          <a  >Pricing</a>
                         </li>
                         <li>
-                          <a href="#">Changelog</a>
+                          <a  >Changelog</a>
                         </li>
                       </ul>
                     </div>
@@ -93,16 +93,16 @@ const Footer = () => {
                           <Link href="/about-us">About us</Link>
                         </li>
                         <li>
-                          <a href="#">Careers</a>
+                          <a  >Careers</a>
                         </li>
                         <li>
-                          <a href="#">Press</a>
+                          <a  >Press</a>
                         </li>
                         <li>
-                          <a href="#">News</a>
+                          <a  >News</a>
                         </li>
                         <li>
-                          <a href="#">Media kit</a>
+                          <a  >Media kit</a>
                         </li>
                         <li>
                           <Link href="/contact-us">Contact</Link>
@@ -117,22 +117,22 @@ const Footer = () => {
                           Resources
                         </li>
                         <li>
-                          <a href="#">How it works</a>
+                          <a  >How it works</a>
                         </li>
                         <li>
-                          <a href="#">Newsletter</a>
+                          <a  >Newsletter</a>
                         </li>
                         <li>
-                          <a href="#">Events</a>
+                          <a  >Events</a>
                         </li>
                         <li>
-                          <a href="#">Help center</a>
+                          <a  >Help center</a>
                         </li>
                         <li>
-                          <a href="#">Tutorials</a>
+                          <a  >Tutorials</a>
                         </li>
                         <li>
-                          <a href="#">Support</a>
+                          <a  >Support</a>
                         </li>
                       </ul>
                     </div>

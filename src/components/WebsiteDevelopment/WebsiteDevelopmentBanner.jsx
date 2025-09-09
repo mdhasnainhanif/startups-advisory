@@ -55,7 +55,7 @@ const WebsiteDevelopmentBanner = () => {
                                         <a
                                             className="button-green open-modal-btn mt-2"
                                             onClick={openModal}
-                                            href="#"
+                                             
                                         >
                                             Build My AI-Enhanced Website
                                         </a>
