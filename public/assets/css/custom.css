@@ -2574,7 +2574,7 @@ button.cout-button {
   color: #fff;
 }
 
-.services-sub-cards-new{
+.services-sub-cards-new {
   box-shadow: 2px 2px 10px 0px #0000001a;
   box-shadow: -2px -2px 10px 0px #0000001a;
   background: #0e0e0f26;
@@ -3315,6 +3315,8 @@ p.blogListInputParagraph {
   margin-top: 1rem;
   margin-right: 1rem;
   margin-left: 1rem;
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .footerPadding {
@@ -3464,10 +3466,12 @@ sup {
   font-weight: 700;
   line-height: 1;
 }
-.pricingCardContentThree h3{
+
+.pricingCardContentThree h3 {
   color: #fff !important;
 }
-.pricingCardContentThree h1{
+
+.pricingCardContentThree h1 {
   color: #fff !important;
 }
 

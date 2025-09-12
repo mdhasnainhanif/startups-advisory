@@ -1,16 +1,21 @@
+
 "use client";
 
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
+
 import { useModal } from "../../hooks/useModal";
+
 
 
 const HomeBanner = () => {
   const typedRef = useRef(null); // span element ke liye
   const typedInstance = useRef(null); // typed instance cleanup ke liye
   const openModal = useModal((state) => state.openModal);
-  
+  // Add refs for cursor images
+  const cursor1Ref = useRef(null);
+  const cursor3Ref = useRef(null);
 
   useEffect(() => {
     if (!typedRef.current) return;
@@ -36,10 +41,62 @@ const HomeBanner = () => {
     };
   }, []);
 
+  // Animate cursor images
+  useEffect(() => {
+    (async () => {
+      const animeModule = await import('animejs');
+      const anime = animeModule.default;
+      if (typeof anime === 'function') {
+        if (cursor1Ref.current) {
+          anime({
+            targets: cursor1Ref.current,
+            loop: true,
+            translateX: [
+              { value: () => animeModule.default.random(-80, 80) },
+              { value: () => animeModule.default.random(-80, 80) }
+            ],
+            translateY: [
+              { value: () => animeModule.default.random(-80, 80) },
+              { value: () => animeModule.default.random(-80, 80) },
+              { value: () => animeModule.default.random(-80, 80) }
+            ],
+            easing: 'easeOutElastic(1, .8)',
+            direction: 'alternate',
+            duration: 10000,
+            delay: 1000
+          });
+        }
+        if (cursor3Ref.current) {
+          anime({
+            targets: cursor3Ref.current,
+            loop: true,
+            translateX: [
+              { value: () => animeModule.default.random(-80, 80) },
+              { value: () => animeModule.default.random(-80, 80) }
+            ],
+            translateY: [
+              { value: () => animeModule.default.random(-80, 80) },
+              { value: () => animeModule.default.random(-80, 80) },
+              { value: () => animeModule.default.random(-80, 80) }
+            ],
+            easing: 'easeOutElastic(1, .8)',
+            direction: 'alternate',
+            duration: 5000,
+            delay: 4000
+          });
+        }
+      }
+    })();
+    return () => {
+      // No cleanup needed for animejs animations
+    };
+  }, []);
+
   return (
     <div
       id="overview"
-      className="overview section panel overflow-hidden uc-dark banner-margin lg:rounded-3"
+      className="overview section panel uc-dark banner-margin lg:rounded-3"
+      style={{ position: 'relative' }}
     >
       <div className="position-cover"></div>
       <div
@@ -79,7 +136,7 @@ const HomeBanner = () => {
                     style={{ top: "40%", right: "10%" }}
                   >
                     <img
-
+                      ref={cursor1Ref}
                       decoding="async"
                       className="w-48px lg:w-80px me-4"
                       src="/assets/images/user-cursor-1.svg"
@@ -92,7 +149,7 @@ const HomeBanner = () => {
                     style={{ bottom: "30%", left: "10%" }}
                   >
                     <img
-
+                      ref={cursor3Ref}
                       decoding="async"
                       className="w-48px lg:w-80px"
                       src="/assets/images/user-cursor-3.svg"

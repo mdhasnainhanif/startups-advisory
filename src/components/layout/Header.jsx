@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -8,6 +8,91 @@ import { useModal } from "../../hooks/useModal";
 
 const Header = () => {
   const openModal = useModal((state) => state.openModal);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
+  const scrollPositionRef = useRef(0);
+
+  // Toggle mobile menu
+  const toggleMobileMenu = (e) => {
+    if (e) {
+      e.preventDefault();
+    }
+    
+    if (!isMobileMenuOpen) {
+      // Store current scroll position before opening menu
+      scrollPositionRef.current = window.pageYOffset || document.documentElement.scrollTop;
+    }
+    
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Toggle services dropdown on mobile
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen);
+  };
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    const handleScroll = (e) => {
+      if (isMobileMenuOpen) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      // Disable scroll on body
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPositionRef.current}px`;
+      document.body.style.width = '100%';
+      
+      // Add touch and wheel event listeners for additional prevention
+      document.addEventListener('touchmove', handleScroll, { passive: false });
+      document.addEventListener('wheel', handleScroll, { passive: false });
+    } else {
+      // Re-enable scroll on body and restore position
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = 'auto';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      
+      // Restore scroll position
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      
+      // Remove event listeners
+      document.removeEventListener('touchmove', handleScroll);
+      document.removeEventListener('wheel', handleScroll);
+    }
+
+    return () => {
+      // Cleanup when component unmounts
+      document.body.style.overflow = 'auto';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.removeEventListener('touchmove', handleScroll);
+      document.removeEventListener('wheel', handleScroll);
+    };
+  }, [isMobileMenuOpen]);
+
   // Sticky classes + styles on scroll (with enter/exit animations)
   useEffect(() => {
     const headerEl = document.querySelector(".uc-header");
@@ -54,7 +139,7 @@ const Header = () => {
 
   // Active link highlight
   useEffect(() => {
-    let currentPage = window.location.pathname.split("/").pop() || "/index";
+    let currentPage = window.location.pathname.split("/").pop() || "/home";
     currentPage = currentPage.split("?")[0].split("#")[0];
 
     const navLinks = document.querySelectorAll(".uc-navbar-nav > li > a");
@@ -69,7 +154,7 @@ const Header = () => {
           href &&
           href !== "#" &&
           (href === currentPage ||
-            (currentPage === "/index" && href === "/index"))
+            (currentPage === "/home" && href === "/home"))
         ) {
           link.classList.add("active");
         }
@@ -109,7 +194,7 @@ const Header = () => {
                 {/* Left */}
                 <div className="uc-navbar-left">
                   <div className="uc-logo">
-                    <a className="panel text-none" href="/index">
+                    <a className="panel text-none" href="/home">
                       <img
                         className="w-100 logo-image"
                         src="assets/images/startups-advisory-01.svg"
@@ -122,12 +207,12 @@ const Header = () => {
                 {/* Center Navigation */}
                 <div className="uc-navbar-center">
                   <ul className="uc-navbar-nav gap-3 xl:gap-3 d-none lg:d-flex fs-5 fw-medium">
-                    <li><a href="/index" className="nav-menu menu-hover">Home</a></li>
+                    <li><a href="/home" className="nav-menu menu-hover">Home</a></li>
                     <li><a href="/about-us" className="nav-menu menu-hover">About Us</a></li>
 
                     {/* Services Dropdown */}
                     <li className="servicesDropdownLi">
-                      <a   className="gap-1 serives-hover">
+                      <a className="gap-1 serives-hover">
                         Services
                         <svg className="transition-transform duration-300 transform down-svg group-hover:rotate-180" width="12" height="12" viewBox="0 0 12 12" fill="none">
                           <path d="M9.5 4.5 6 8 2.5 4.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
@@ -304,17 +389,124 @@ const Header = () => {
                 {/* Right */}
                 <div className="uc-navbar-right">
                   <button
-                    className="button-Purple buttonPurpleResponsive open-modal-btn"
+                    className="button-Purple buttonPurpleResponsive open-modal-btn hidden md:block"
                     onClick={openModal}
                   >
                     <span>Free Strategy Session</span>
                   </button>
-                  <a className="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                  <a 
+                    className="d-block lg:d-none mobile-menu-toggle" 
+                    onClick={toggleMobileMenu}
+                    href="#!"
+                  >
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </nav>
+
+        {/* Mobile Menu - Opens from left */}
+        <div className={`mobile-menu-panel ${isMobileMenuOpen ? 'open' : ''}`} ref={mobileMenuRef}>
+          <div className="mobile-menu-header">
+            <div className="uc-logo">
+              <a className="panel text-none" href="/home">
+                <img
+                  className="w-100 logo-image"
+                  src="assets/images/startups-advisory-01.svg"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <button className="mobile-menu-close" onClick={toggleMobileMenu}>
+              +
+            </button>
+          </div>
+          
+          <ul className="mobile-nav">
+            <li><a href="/home" onClick={toggleMobileMenu}>Home</a></li>
+            <li><a href="/about-us" onClick={toggleMobileMenu}>About Us</a></li>
+            
+            <li className="mobile-services-item">
+              <div className="mobile-services-header" onClick={toggleServices}>
+                <span>Services</span>
+                <svg 
+                  className={`services-arrow ${isServicesOpen ? 'open' : ''}`} 
+                  width="12" 
+                  height="12" 
+                  viewBox="0 0 12 12" 
+                  fill="none"
+                >
+                  <path d="M9.5 4.5 6 8 2.5 4.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              
+              <div className={`mobile-services-dropdown ${isServicesOpen ? 'open' : ''}`}>
+                <a href="/logo-design" onClick={toggleMobileMenu}>
+                  <img src="assets/images/dropdown-icon-01.svg" alt="icon" />
+                  <div>
+                    <span>Logo Design</span>
+                    <p>Crafting unique brand foundations.</p>
+                  </div>
+                </a>
+                
+                <a href="/website-development" onClick={toggleMobileMenu}>
+                  <img src="assets/images/dropdown-icon-01.svg" alt="icon" />
+                  <div>
+                    <span>Website Development</span>
+                    <p>Crafting unique brand foundations.</p>
+                  </div>
+                </a>
+                
+                <a href="/marketing-strategy" onClick={toggleMobileMenu}>
+                  <img src="assets/images/dropdown-icon-02.svg" alt="icon" />
+                  <div>
+                    <span>Marketing Strategy</span>
+                    <p>Smarter systems, seamless automation.</p>
+                  </div>
+                </a>
+                
+                <a href="/staff-augmentation" onClick={toggleMobileMenu}>
+                  <img src="assets/images/dropdown-icon-03.svg" alt="icon" />
+                  <div>
+                    <span>Staff Augmentation</span>
+                    <p>Engage, convert, grow continuously.</p>
+                  </div>
+                </a>
+                
+                <a href="/printing" onClick={toggleMobileMenu}>
+                  <img src="assets/images/dropdown-icon-05.svg" alt="icon" />
+                  <div>
+                    <span>Printing</span>
+                    <p>Designs that drive impact.</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            
+            <li><a href="/blog" onClick={toggleMobileMenu}>Blog</a></li>
+            <li><a href="/contact-us" onClick={toggleMobileMenu}>Contact</a></li>
+            <li><a href="/pricing" onClick={toggleMobileMenu}>Pricing</a></li>
+          </ul>
+          
+          <button
+            className="button-green"
+            onClick={() => {
+              openModal();
+              toggleMobileMenu();
+            }}
+          >
+            Free Strategy Session
+          </button>
+        </div>
+        
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="mobile-menu-overlay" onClick={toggleMobileMenu}></div>
+        )}
       </header>
       {/* Header End */}
 
@@ -353,19 +545,19 @@ const Header = () => {
           to   { opacity: 0.96; }
         }
 
-        /* Sticky look */
+        /* Sticky look - Remove top space when scrolled */
         .uc-header.is-sticky {
           position: fixed !important;
           width: 100% !important;
-          top: 1rem;
+          top: 0 !important;
           margin-top: 0 !important;
-          background-color: rgba(255, 255, 255, 0.9);
+          background-color: rgba(255, 255, 255, 0.95);
           backdrop-filter: saturate(180%) blur(8px);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
           z-index: 9999;
         }
         .dark .uc-header.is-sticky {
-          background-color: rgba(18, 18, 18, 0.85);
+          background-color: rgba(18, 18, 18, 0.95);
         }
 
         /* Shrink logo slightly when sticky */
@@ -382,6 +574,279 @@ const Header = () => {
         /* Transparent when not sticky (optional) */
         .uc-navbar-container.uc-navbar-transparent {
           background-color: transparent;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          width: 21px;
+          height: 24px;
+          cursor: pointer;
+          color:#643bff;
+        }
+        
+        @media (max-width: 1024px) {
+          .mobile-menu-toggle {
+            display: flex;
+          }
+        }
+        
+        .mobile-menu-toggle .bar {
+          height: 2px;
+          width: 100%;
+          background-color: currentColor;
+          margin: 2px 0;
+          transition: all 0.3s ease;
+        }
+        
+        /* Mobile Menu Panel - Opens from left */
+        .mobile-menu-panel {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          width: 320px;
+          height: 100vh;
+          background: rgb(255 255 255 / 50%) !important;
+          -webkit-backdrop-filter: blur(5px) !important;
+          backdrop-filter: blur(13px) !important;
+          z-index: 10000;
+          transition: left 0.3s ease;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+          overflow-y: auto;
+        }
+        
+        .dark .mobile-menu-panel {
+          background: #1a1a1a;
+        }
+        
+        .mobile-menu-panel.open {
+          left: 0;
+        }
+        
+        .mobile-menu-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .dark .mobile-menu-header {
+          border-bottom-color: #333;
+        }
+        
+        .uc-navbar-sticky{
+          background: rgb(255 255 255 / 40%) !important;
+          -webkit-backdrop-filter: blur(5px) !important;
+          backdrop-filter: blur(13px) !important;
+        }
+        
+        .mobile-menu-close {
+          cursor: pointer;
+          color: #fff;
+          border: none;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          background-color: #0fdac2 !important;
+          font-weight: 100;
+          height: 1.5rem;
+          width: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: rotate(45deg);
+        }
+        
+        .mobile-nav {
+          list-style: none;
+          padding: 0;
+        }
+        
+        .mobile-nav a {
+          display: block;
+          padding: 12px 0;
+          text-decoration: none;
+          color: inherit;
+          font-weight: 500;
+        }
+        
+        .dark .mobile-services-item {
+          border-bottom-color: #333;
+        }
+        
+        .mobile-services-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px 0;
+          cursor: pointer;
+          font-weight:500;
+        }
+        
+        .services-arrow {
+          transition: transform 0.3s ease;
+        }
+        
+        #blurEffect {
+          background: rgb(255 255 255 / 40%) !important;
+          -webkit-backdrop-filter: blur(5px) !important;
+          backdrop-filter: blur(13px) !important;
+        }
+        
+        .services-arrow.open {
+          transform: rotate(180deg);
+        }
+        
+        .mobile-services-dropdown {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+        }
+        
+        .mobile-services-dropdown.open {
+          max-height: 500px;
+        }
+        
+        .mobile-services-dropdown a {
+          display: flex;
+          align-items: center;
+          padding: 10px 0 10px 15px;
+          border-bottom: none;
+          font-size: 14px;
+        }
+        
+        .mobile-services-dropdown a img {
+          width: 24px;
+          margin-right: 10px;
+        }
+        
+        .mobile-services-dropdown a div {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .mobile-services-dropdown a span {
+          font-weight: 500;
+          margin-bottom: 2px;
+        }
+        
+        .mobile-services-dropdown a p {
+          font-size: 12px;
+          color: #666;
+          margin: 0;
+        }
+        
+        .dark .mobile-services-dropdown a p {
+          color: #999;
+        }
+        
+        .mobile-menu-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 9998;
+          cursor: pointer;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+          .uc-navbar-center .uc-navbar-nav {
+            gap: 2px !important;
+          }
+          
+          .uc-navbar-nav .nav-menu {
+            font-size: 14px;
+            padding: 8px 10px;
+          }
+          
+          .servicesDropdown {
+            width: 700px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .uc-navbar-main .container {
+            padding: 0 15px;
+          }
+          
+          .buttonPurpleResponsive {
+            padding: 8px 12px;
+            font-size: 14px;
+          }
+          
+          .servicesDropdown {
+            width: 90vw;
+            left: 5vw;
+            transform: none;
+          }
+          
+          .servicesDropdown .row {
+            flex-direction: column;
+          }
+          
+          .servicesDropdown .col-7,
+          .servicesDropdown .col-5 {
+            width: 100%;
+            padding: 0;
+          }
+          
+          .dropDownSlider {
+            margin-top: 20px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .uc-navbar {
+            min-height: 60px !important;
+            padding: 0 10px;
+          }
+          
+          .uc-logo img {
+            max-width: 120px;
+          }
+          
+          .button-Purple {
+            display: none;
+          }
+          
+          .servicesDropdown {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95vw;
+            max-height: 80vh;
+            overflow-y: auto;
+          }
+          
+          .servicesDropdownContent01,
+          .servicesDropdownContent02 {
+            padding: 15px;
+          }
+          
+          .servicesDropDownSubContent h2 {
+            font-size: 18px;
+          }
+          
+          .dropDownCard {
+            padding: 15px;
+          }
+          
+          .dropDownLogo {
+            justify-content: center;
+          }
+          
+          .mobile-menu-panel {
+            width: 280px;
+          }
         }
       `}</style>
     </>

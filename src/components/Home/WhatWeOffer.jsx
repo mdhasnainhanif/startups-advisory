@@ -1,6 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useModal } from "../../hooks/useModal";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function WhatWeOffer({
   heading = "Core Services For Startups",
@@ -8,6 +12,49 @@ export default function WhatWeOffer({
   cards = [],
 }) {
   const openModal = useModal((state) => state.openModal);
+
+  useEffect(() => {
+    // Only apply animations on desktop/tablet
+    ScrollTrigger.matchMedia({
+      "(min-width: 768px)": function () {
+        gsap.utils.toArray(".gsap-left").forEach((elem) => {
+          gsap.fromTo(
+            elem,
+            { x: -120},
+            {
+              x: 0,
+              duration: 1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: elem,
+                start: "top 80%",
+                end: "top 20%",
+                scrub: true,
+              },
+            }
+          );
+        });
+
+        gsap.utils.toArray(".gsap-right").forEach((elem) => {
+          gsap.fromTo(
+            elem,
+            { x: 120 },
+            {
+              x: 0,
+              duration: 1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: elem,
+                start: "top 80%",
+                end: "top 20%",
+                scrub: true,
+              },
+            }
+          );
+        });
+      },
+    });
+  }, []);
 
   return (
     <section className="services-section section-padding">

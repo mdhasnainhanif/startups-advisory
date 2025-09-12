@@ -64,9 +64,6 @@ a {
 
 .contactUsCards {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .contactUsCards h6 {
@@ -110,4 +107,7 @@ a {
 .popup-image{
   width: 100%;
   max-width: 20rem;
+}
+.pricingCardsIpad{
+  display: none;
 }

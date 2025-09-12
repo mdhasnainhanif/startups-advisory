@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
         <link
           rel="stylesheet"
           href="/assets/css/theme/theme-two.min.purge.css"

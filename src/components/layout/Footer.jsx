@@ -29,7 +29,7 @@ const Footer = () => {
                     <div className="col-12 lg:col-6">
                       <div className="panel vstack items-start gap-3 xl:gap-4 lg:max-w-1/2">
                         <div>
-                          <Link className="panel text-none" href="/index">
+                          <Link className="panel text-none" href="/home">
                             <img
                               className="w-100 logo-image"
                               src="assets/images/startups-advisory-02.svg"

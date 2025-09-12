@@ -28,6 +28,28 @@
     }
 }
 
+@media (max-width:1024px) {
+    .uc-navbar-right {
+        display: none !important;
+    }
+
+    .uc-navbar-center:not(:only-child) {
+        left: 52%;
+    }
+
+    .pricingCardsDekstop {
+        display: none;
+    }
+
+    .pricingCardsIpad {
+        display: block;
+    }
+
+    .swiper-slide .pricingCardOne {
+        max-width: 29rem;
+    }
+}
+
 @media(max-width: 1024px) {
     .swiper-container {
         display: block;
@@ -138,10 +160,6 @@
     }
 
     /* Unique rules from second block */
-    .pricingCardOne {
-        max-width: 26rem;
-        height: unset;
-    }
 
     .custom_modal {
         max-width: 60rem;
@@ -215,7 +233,7 @@
     }
 
     .buttonPurpleResponsive {
-        display: none;
+        display: none !important;
     }
 
     .ai-traditional-cards-01,
@@ -247,7 +265,7 @@
         margin-top: 0;
     }
 
-    .cta-section {
+    .cta-section.key-features {
         max-width: 61rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -352,6 +370,34 @@
         width: 100% !important;
     }
 
+    .dataMainCard .datDevCard-spacing {
+        max-width: 23.2rem !important;
+    }
+
+    .developementCard.datDevCard {
+        padding: 0rem !important;
+    }
+
+    .uc-navbar-sticky .mobile-menu-panel .open {
+        top: -1rem;
+    }
+
+    .uc-navbar-right .button-Purple {
+        display: none !important;
+    }
+
+    .uc-navbar-right {
+        display: flex !important;
+    }
+
+    .uc-navbar-nav {
+        display: none !important;
+    }
+
+    .servicesDropdownLi {
+        display: none;
+    }
+
     .uc-navbar-dropdown-dropbar {
         --uc-position-viewport-offset: 40px;
     }
@@ -383,6 +429,7 @@
 
     .banner-margin {
         margin: 0rem;
+        border-radius: 0rem !important;
     }
 
     .logoSectionHeading {
@@ -482,7 +529,7 @@
     }
 
     .button-green {
-        white-space: normal;
+        white-space: normal !important;
     }
 
     .uc-navbar-right svg {
@@ -565,7 +612,7 @@
         display: none;
     }
 
-    .cta-section {
+    .cta-section.key-features {
         max-width: 46rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -579,6 +626,7 @@
     .ipad-banner-button {
         margin: 0 auto;
         display: block;
+        margin-bottom: 3rem !important;
     }
 
     .statistic-section {
@@ -722,6 +770,22 @@
 }
 
 @media (max-width: 576px) {
+    .col-sm-6 {
+        width: 50%;
+        --grid-total: 6 !important;
+        --grid-count: 6 !important;
+        flex: 0 0 auto !important;
+    }
+
+    .contactUs {
+        width: 100%;
+        max-width: 26rem;
+    }
+
+    .contactUsCards {
+        margin-top: 1rem;
+    }
+
     .ai-traditional-cards-01-content h3 {
         font-size: 2rem !important;
     }
@@ -1010,7 +1074,7 @@
     }
 
     #statistic-1 .row.items-center {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .counter-section {
@@ -1193,12 +1257,12 @@
         display: none;
     }
 
-    .cta-section {
+    .cta-section.key-features {
         max-width: 22rem;
     }
 
-    .counter-section {
-        width: 48%;
+    #statistic-1 .row.items-center .counter-section {
+        width: 45% !important;
     }
 
     .statistic-number-heading,
@@ -1412,7 +1476,7 @@
     }
 
     #main_features {
-        margin-bottom: 0rem;
+        /* margin-bottom: 0rem; */
         overflow-x: hidden;
     }
 

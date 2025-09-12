@@ -1757,7 +1757,7 @@ p.text-muted:where(.uc-dark) {
 
 .uc-navbar-float {
     position: absolute;
-    top: 0;
+    top: 12px;
     left: 0;
     right: 0
 }
@@ -2659,7 +2659,7 @@ header.uc-preview-header .uc-navbar-container.uc-navbar-sticky .uc-navbar-nav li
 }
 
 header.uc-header.header-six>:not(.uc-navbar-sticky) .uc-navbar-main a {
-    color: #000;
+    color: #000000;
     transition: opacity 250ms ease
 }
 

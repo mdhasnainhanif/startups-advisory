@@ -8,11 +8,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const GsapSliderHome = ({ heading, subHeading, cards }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 576) {
+        // Do not animate for screens <= 576px
+        return;
+      }
       gsap.registerPlugin(ScrollTrigger);
 
-      const screenWidth = window.innerWidth;
       let endX;
-
       if (screenWidth === 768) {
         endX = "-125%"; // iPad portrait
       } else if (screenWidth === 1024) {
